@@ -26,8 +26,13 @@ module.exports = {
       links: [
         { to: "docs/overview/about", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
-        { to: "discord", label: "Discord", position: "left" },
-        { to: "download", label: "Download", position: "left" },
+        {
+          href: "https://discord.gg/22raTJh",
+          label: "Discord",
+          position: "left"
+        },
+        { to: "download", label: "Download (0.3.2)", position: "left" },
+        { to: "support", label: "Support", position: "left" },
         {
           href: "https://github.com/CWolfs/MissionControl",
           label: "GitHub",
@@ -43,7 +48,7 @@ module.exports = {
           items: [
             {
               label: "Docs",
-              to: "docs/doc1"
+              to: "docs/overview/about"
             }
           ]
         },
@@ -52,7 +57,7 @@ module.exports = {
           items: [
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus"
+              href: "https://discord.gg/22raTJh"
             }
           ]
         },

@@ -19,7 +19,7 @@ window.localStorage.setItem("theme", "dark");
 const features = [
   {
     title: <>Replayability</>,
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    imageUrl: "img/replay_scaled.png",
     description: (
       <>
         From new contract types, creative reuse of maps, random spawns and
@@ -29,7 +29,7 @@ const features = [
   },
   {
     title: <>Unique Custom Content</>,
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    imageUrl: "img/content-icon.png",
     description: (
       <>
         The only mod that achieves encounter content, such as custom contract
@@ -40,7 +40,7 @@ const features = [
   },
   {
     title: <>Heavily Configurable</>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/configure_scaled.png",
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -75,10 +75,6 @@ function Home() {
     >
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          {/*
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          */}
           <div className={styles.buttons}>
             <Link
               className={classnames(
