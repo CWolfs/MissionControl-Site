@@ -59,19 +59,19 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Site",
           items: [
             {
               label: "Docs",
               to: "docs/overview/about"
             },
             {
-              label: "Github",
-              to: "https://github.com/CWolfs/MissionControl"
+              label: "Blog",
+              to: "blog"
             },
             {
-              label: "Nexus",
-              to: "https://www.nexusmods.com/battletech/mods/319"
+              label: "Support",
+              to: "support"
             }
           ]
         },
@@ -93,11 +93,15 @@ module.exports = {
           ]
         },
         {
-          title: "Social",
+          title: "Links",
           items: [
             {
-              label: "Blog",
-              to: "blog"
+              label: "Github",
+              to: "https://github.com/CWolfs/MissionControl"
+            },
+            {
+              label: "Nexus",
+              to: "https://www.nexusmods.com/battletech/mods/319"
             }
           ]
         }
