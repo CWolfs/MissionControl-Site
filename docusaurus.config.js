@@ -27,12 +27,27 @@ module.exports = {
         { to: "docs/overview/about", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
+          href:
+            "https://github.com/CWolfs/MissionControl/releases/download/v0.3.2/MissionControl-v0.3.2.zip",
+          label: "Download (0.3.2)",
+          position: "left"
+        },
+        {
+          to: "blog/tags/changelog",
+          label: "Changelog",
+          position: "left"
+        },
+        {
           href: "https://discord.gg/22raTJh",
           label: "Discord",
           position: "left"
         },
-        { to: "download", label: "Download (0.3.2)", position: "left" },
         { to: "support", label: "Support", position: "left" },
+        {
+          href: "https://www.nexusmods.com/battletech/mods/319",
+          label: "Nexus",
+          position: "right"
+        },
         {
           href: "https://github.com/CWolfs/MissionControl",
           label: "GitHub",
@@ -49,6 +64,14 @@ module.exports = {
             {
               label: "Docs",
               to: "docs/overview/about"
+            },
+            {
+              label: "Github",
+              to: "https://github.com/CWolfs/MissionControl"
+            },
+            {
+              label: "Nexus",
+              to: "https://www.nexusmods.com/battletech/mods/319"
             }
           ]
         },
@@ -56,8 +79,16 @@ module.exports = {
           title: "Community",
           items: [
             {
-              label: "Discord",
+              label: "MC Discord",
               href: "https://discord.gg/22raTJh"
+            },
+            {
+              label: "BattleTech Game",
+              href: "http://harebrained-schemes.com/battletech/"
+            },
+            {
+              label: "BattleTech Steam",
+              href: "http://store.steampowered.com/app/637090/BattleTech/"
             }
           ]
         },
