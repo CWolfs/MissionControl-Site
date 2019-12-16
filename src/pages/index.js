@@ -43,8 +43,9 @@ const features = [
     imageUrl: "img/configure_scaled.png",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Every feature is configurable which allows for a modpack team or player
+        to tweak things to how they like it. Already used in Modpacks such as
+        RogueTech and BTA 3062.
       </>
     )
   }
