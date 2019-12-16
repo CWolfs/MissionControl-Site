@@ -3,20 +3,50 @@ id: extended-lances
 title: Extended Lances
 ---
 
-You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
+Extended lances can change the lance size of vanilla lance spawns and ones created with Mission Control's `Additional Lances` feature.
 
-export const Highlight = ({children, color}) => (
-<span
-style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>
-{children}
-</span>
-);
+## Settings Breakdown
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+```json
+"ExtendedLances": {
+  "Enable": true,
+  "Autofill": true,
+  "LanceSizes": {
+    "5": [
+      {
+        "Faction": "AuriganRestoration",
+        "DifficultyMod": -1
+      },
+      {
+        "Faction": "TaurianConcordat",
+        "DifficultyMod": -2
+      }
+    ],
+    "6": [
+      {
+      "Faction": "Comstar",
+      "DifficultyMod": -4
+      }
+    ],
+  }
+}
+```
 
-I can write **Markdown** alongside my _JSX_!
+| Path         | Required? | Default | Details                                                                                                                                     |
+| ------------ | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Enable`     | Optional  | true    | Should this feature be enabled or not?                                                                                                      |
+| `Autofill`   | Optional  | true    | If a lance is selected for a spawn that has below the require number of units - should Extended Lances fill the lance up to the right size? |
+| `LanceSizes` | Optional  | N/A     | Sets which faction should have higher lance sizes. By default all faction lances are 4 units like vanilla.                                  |
+
+### Lance Sizes
+
+| Path                                 | Required? | Default | Example         | Details |
+| ------------------------------------ | --------- | ------- | --------------- | ------- |
+| Any string number above 4 (e.g. "5") | Optional  | N/A     | See Table Below | -       |
+
+### Lance Sizes Data
+
+| Path            | Required? | Default | Example                                                                                                          | Details |
+| --------------- | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- | ------- |
+| `Faction`       | true      | true    | The faction short name is used to identify which faction should have the set number of units                     |
+| `DifficultyMod` | Optional  | true    | The difficulty modifier changes the lance selection criteria so a lower, or higher, difficulty lance is selected |

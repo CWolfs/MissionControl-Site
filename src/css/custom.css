@@ -39,3 +39,7 @@
 .footer .footer__logo {
   max-width: 3rem;
 }
+
+table tr:nth-child(2n) {
+  background-color: #2a2b2f;
+}
