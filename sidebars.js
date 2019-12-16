@@ -16,7 +16,6 @@ module.exports = {
     Download: ["download"],
     "Known Issues": ["mdx"],
     Tutorials: ["mdx"],
-    "Suggestions & Feeback": ["mdx"],
-    Support: ["mdx"]
+    "Suggestions & Feeback": ["mdx"]
   }
 };
