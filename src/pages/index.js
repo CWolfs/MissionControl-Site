@@ -44,7 +44,7 @@ const features = [
     description: (
       <>
         Every feature is configurable which allows for a modpack team or player
-        to tweak things to how they like it. Already used in Modpacks such as
+        to tweak things to how they like it. Already used in modpacks such as
         RogueTech and BTA 3062.
       </>
     )

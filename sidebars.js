@@ -13,7 +13,6 @@ module.exports = {
       "features/quick-skirmish",
       "features/combat-dialogue"
     ],
-    Download: ["download"],
     "Known Issues": ["mdx"],
     Tutorials: ["mdx"],
     "Suggestions & Feeback": ["mdx"]
