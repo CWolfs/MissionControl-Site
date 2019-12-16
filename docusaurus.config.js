@@ -42,7 +42,7 @@ module.exports = {
           label: "Discord",
           position: "left"
         },
-        { to: "support", label: "Support", position: "left" },
+        { to: "docs/support", label: "Support", position: "left" },
         {
           href: "https://www.nexusmods.com/battletech/mods/319",
           label: "Nexus",
