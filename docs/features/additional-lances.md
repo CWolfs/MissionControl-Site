@@ -3,6 +3,8 @@ id: additional-lances
 title: Additional Lances
 ---
 
+Additional enemy and ally lances will spawn based on contract type, biome type, faction reputation, allies/enemies, percentage chances, maximum limits and lance configs.
+
 Additional enemy and ally lances can be spawned in all contract types based on contract type, biome type, percentage chances, maximum limits and lance configs. These are controlled by the `settings.json` section `AdditionalLances`.
 
 Lances are defined using a similar configuration to how they are defined in the contract `.json` files. They can be lances with specific mechs, or make use of tags for the game to select an appropriate lance.

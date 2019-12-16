@@ -3,6 +3,8 @@ id: encounter-rulesets
 title: Encounter Rulesets
 ---
 
+Mission Control allows other modders to add their own contract type rulesets to be used. When added to the mod, the mod will randomly select a ruleset for a contract type from the given choices.
+
 Encounter Rulesets are what control the manipulation of a mission/contract. To manipulate encounters you create lots of `Logic` objects and submit them to the `EncounterLogic` system. Mission Control then intelligently runs these logic blocks at the correct point as the game runs.
 
 ## Example Ruleset

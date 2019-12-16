@@ -3,6 +3,10 @@ id: extended-lances
 title: Extended Lances
 ---
 
+Increase the sizes of lances where it makes sense. For the vanilla game this does nothing. If another mod is using Mission Control, then they can set Clan stars (5 mechs) or Comstar Demi-lances / Reinforced lances (6 mechs).
+
+This works for both vanilla spawn points for contract types and spawns created by Mission Control.
+
 Extended lances can change the lance size of vanilla lance spawns and ones created with Mission Control's `Additional Lances` feature.
 
 ## Settings Breakdown
