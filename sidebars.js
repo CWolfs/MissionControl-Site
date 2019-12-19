@@ -1,7 +1,8 @@
 module.exports = {
   docs: {
-    Overview: ["overview/about"],
+    Overview: ["overview/about", "overview/install"],
     Features: [
+      "features/settings",
       "features/custom-contract-types",
       "features/additional-lances",
       "features/random-spawns",
@@ -13,6 +14,7 @@ module.exports = {
       "features/quick-skirmish",
       "features/combat-dialogue"
     ],
+    Content: ["content/story", "content/procedural-contract-types"],
     "Known Issues": ["mdx"],
     Tutorials: ["mdx"],
     "Suggestions & Feeback": ["mdx"]
