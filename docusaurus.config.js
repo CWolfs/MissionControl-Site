@@ -9,8 +9,8 @@ const path = require("path");
 module.exports = {
   title: "Mission Control",
   tagline: "A BattleTech Mod",
-  url: "https://www.missioncontrolmod.com",
-  baseUrl: "/",
+  url: "https://cwolfs.github.io",
+  baseUrl: "/missioncontrol/",
   favicon: "img/favicon.ico",
   organizationName: "CWolf", // Usually your GitHub org/user name.
   projectName: "missioncontrol", // Usually your repo name.
