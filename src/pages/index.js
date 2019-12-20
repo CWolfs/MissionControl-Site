@@ -74,7 +74,7 @@ function Home() {
   return (
     <Layout
       title={`${siteConfig.title} - ${siteConfig.tagline}`}
-      description="Description will go into a meta tag in <head />"
+      description="Mission Control - A BattleTech Mod. Provides a framework for runtime modifications of the contracts, encounters and other map logic."
     >
       <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">

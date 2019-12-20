@@ -6,14 +6,15 @@
  */
 const path = require("path");
 
+
 module.exports = {
   title: "Mission Control",
   tagline: "A BattleTech Mod",
   url: "https://cwolfs.github.io",
-  baseUrl: "/missioncontrol/",
+  baseUrl: "/MissionControl/",
   favicon: "img/favicon.ico",
   organizationName: "CWolf", // Usually your GitHub org/user name.
-  projectName: "missioncontrol", // Usually your repo name.
+  projectName: "MissionControl", // Usually your repo name.
   plugins: [path.resolve(__dirname, "plugins/file-loader-webpack-plugin")],
   themeConfig: {
     disableDarkMode: true,
@@ -21,7 +22,7 @@ module.exports = {
       title: "",
       logo: {
         alt: "Mission Control Logo",
-        src: "images/mc-logo.png"
+        src: "img/mc-logo.png"
       },
       links: [
         { to: "docs/overview/about", label: "Docs", position: "left" },
@@ -108,7 +109,7 @@ module.exports = {
       ],
       logo: {
         alt: "CWolf Logo",
-        src: "images/cwolf-logo.png",
+        src: "img/cwolf-logo.png",
         href: "https://github.com/CWolfs"
       },
       copyright: `Copyright © ${new Date().getFullYear()} Richard 'CWolf' Griffiths`

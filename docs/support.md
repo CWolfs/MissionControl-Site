@@ -3,7 +3,7 @@ id: support
 title: Support
 ---
 
-I'm Richard 'CWolf' Griffiths. I'm a developer at a small games company called [Rogue Vector](https://www.roguevector.com) who also works on projects on the side. My main side projects is modding for BattleTech game and I've created a few useful mods.
+I'm Richard 'CWolf' Griffiths. I'm a developer at a small games company called [Rogue Vector](https://www.roguevector.com) who also works on projects on the side. My main side project is modding for BattleTech game and I've created a few useful mods, such as BTDebug, ConverseTek and Mission Control.
 
 If you enjoy my mods and my efforts to bring new content and experiences to BattleTech - feel free to support me by [Buying me a Coffee](https://www.buymeacoffee.com/NFLgCRS).
 
