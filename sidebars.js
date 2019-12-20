@@ -1,6 +1,6 @@
 module.exports = {
   docs: {
-    Overview: ["overview/about", "overview/install"],
+    Overview: ["overview/about", "overview/install", "overview/media"],
     Features: [
       "features/settings",
       "features/custom-contract-types",
