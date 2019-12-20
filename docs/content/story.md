@@ -1,6 +1,6 @@
 ---
 id: story
-title: Story
+title: Story & Flashpoints
 ---
 
-Currently, there is not extra story added but it is on the roadmap.
+Currently, there is not extra story or flashpoints added but it is on the roadmap.

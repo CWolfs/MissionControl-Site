@@ -4,6 +4,7 @@ module.exports = {
     Features: [
       "features/settings",
       "features/custom-contract-types",
+      "features/reuse-of-story-maps",
       "features/additional-lances",
       "features/random-spawns",
       "features/encounter-rulesets",
@@ -15,8 +16,6 @@ module.exports = {
       "features/combat-dialogue"
     ],
     Content: ["content/story", "content/procedural-contract-types"],
-    "Known Issues": ["mdx"],
-    Tutorials: ["mdx"],
-    "Suggestions & Feeback": ["mdx"]
+    "Suggestions & Feeback": ["support"]
   }
 };

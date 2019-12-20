@@ -80,7 +80,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
 | DisableIfFlashpointContract | `true`                   | N/A     | Disables MC for Flashpoints if `true`                         |
 | RandomSpawns                | [Object](#random-spawns) | N/A     | Random spawn settings                                         |
 
-|
+_**More to come soon**_
 
 ### Random Spawns
 
@@ -90,8 +90,4 @@ Mission Control is designed from the very beginning to be entirely configurable 
 | IncludeContractTypes   | All available contract types | `["Rescue", "DestroyBase"]` would limit lances to these two contract types <br /><br /> `[]` would fallback to default | When set, it overrides `ExcludeContractTypes` for this level                                                                                                        |
 | `ExcludeContractTypes` | Optional                     | No contract types                                                                                                      | `["Assasinate", "CaptureBase"]` would remove these two contract types from the entire list of available contract types. <br /><br /> `[]` would fallback to default | Allows you to explicitly exclude additional lance spawns for all teams for the specified contract types. Not used if `IncludeContractTypes` is set |
 
-### Holder
-
-| Path | Default | Example | Details |
-| ---- | ------- | ------- | ------- |
-
+_**More to come soon**_

@@ -14,7 +14,9 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
 // Force dark theme on
-window.localStorage.setItem("theme", "dark");
+if (typeof(window) !== 'undefined') {
+  window.localStorage.setItem("theme", "dark");
+} 
 
 const features = [
   {
