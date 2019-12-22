@@ -6,12 +6,11 @@
  */
 const path = require("path");
 
-
 module.exports = {
   title: "Mission Control",
   tagline: "A BattleTech Mod",
   url: "https://cwolfs.github.io",
-  baseUrl: "/MissionControl/",
+  baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "CWolf", // Usually your GitHub org/user name.
   projectName: "MissionControl", // Usually your repo name.
@@ -29,8 +28,8 @@ module.exports = {
         { to: "blog", label: "Blog", position: "left" },
         {
           href:
-            "https://github.com/CWolfs/MissionControl/releases/download/v0.3.2/MissionControl-v0.3.2.zip",
-          label: "Download (0.3.2)",
+            "https://github.com/CWolfs/MissionControl/releases/download/v0.4.0/MissionControl.zip",
+          label: "Download (0.4.0)",
           position: "left"
         },
         {
