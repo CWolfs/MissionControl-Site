@@ -5,9 +5,9 @@ title: Additional Lances
 
 Additional enemy and ally lances will spawn based on contract type, biome type, faction reputation, allies/enemies, percentage chances, maximum limits and lance configs.
 
-Additional enemy and ally lances can be spawned in all contract types based on contract type, biome type, percentage chances, maximum limits and lance configs. These are controlled by the `settings.json` section `AdditionalLances`.
+Additional enemy and ally lances can be spawned in all contract types based on contract type, biome type, percentage chances, maximum limits and lance configs. These are controlled by the files under `config/AdditionalLances`. There is a file for each difficulty level. A single difficulty level is the equivalent to 1/2 contract skull value so, for example, the file `Difficulty6.json` would be used if you select a 3 skull contract - if the game actually gives you a 3 skull contract. Often you get `+/- 1` difficulty level so you may get a `5` (2 and 1/2 skulls) or a `7` (3 and 1/2 skulls) difficulty contract instead without realising it).
 
-Lances are defined using a similar configuration to how they are defined in the contract `.json` files. They can be lances with specific mechs, or make use of tags for the game to select an appropriate lance.
+Lances are defined using a similar configuration to how they are defined in the contract `.json` files. They can be lances with specific mechs, or make use of tags for the game to select an appropriate lance. You can find some predefined lance files used by MC under the `lances` folder. You can create your own and they will be loaded. You can create a folder structure of lances for organisational purposes and they will be loaded without issue.
 
 - [Settings Breakdown](#settings-breakdown)
 - [Lance Definition Breakdown](#lance-definition-breakdown)
