@@ -16,7 +16,8 @@ You can configure the follow lance AI with the follow `settings.json` options.
   "FollowPlayer": {
     "Target": "HeaviestMech", // HeaviestMech or LanceOrder
     "StopWhen": "OnEnemyDetected", // OnEnemyDetected, OnEnemyVisible, WhenNotNeeded
-    "MaxDistanceFromTargetBeforeSprinting": 200 // Distance beyond which the ally will only sprint to catch up
+    "MaxDistanceFromTargetBeforeSprinting": 200, // Distance beyond which the ally will only sprint to catch up
+    "TargetZoneRadius": 120 // The zone radius the following mech will try to get within
   }
 }
 ```
@@ -26,3 +27,4 @@ You can configure the follow lance AI with the follow `settings.json` options.
 | Target                               | `HeaviestMech`    | `HeaviestMech` follows heaviest mech. `LanceOrder` follows units 1 (if it dies they follow unit 2 etc) |
 | StopWhen                             | `OnEnemyDetected` | `OnEnemyDetected`, `OnEnemyVisible`, `WhenNotNeeded`                                                   |
 | MaxDistanceFromTargetBeforeSprinting | `200`             | Distance beyond which the ally will only sprint to catch up                                            |
+| TargetZoneRadius                     | `120`             | Distance to keep within of the target. 1 grid point = 24 units. Straight line check.                   |
