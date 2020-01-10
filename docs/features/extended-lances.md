@@ -54,3 +54,56 @@ Extended lances can change the lance size of vanilla lance spawns and ones creat
 | --------------- | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- | ------- |
 | `Faction`       | true      | true    | The faction short name is used to identify which faction should have the set number of units                     |
 | `DifficultyMod` | Optional  | true    | The difficulty modifier changes the lance selection criteria so a lower, or higher, difficulty lance is selected |
+
+## Faction Ids
+
+The `Faction` name you use is taken from your `BATTLETECH/BattleTech_Data/StreamingAssets/data/enums/Faction.json` file and the `Name` property. You can also refer to modded factions here too in the same way, by using their `Name` property.
+
+The vanilla factions are:
+
+- Davion
+- Liao
+- Kurita
+- Marik
+- Steiner
+- TaurianConcordat
+- MagistracyOfCanopus
+- AuriganDirectorate
+- AuriganRestoration
+- ComStar
+- MercenaryReviewBoard
+- AuriganPirates
+- AuriganMercenaries
+- Locals
+- Unknown
+- MagistracyCentrella
+- MajestyMetals
+- Nautilus
+- Betrayers
+- FlakJackals
+- LocalsBrockwayRefugees
+- SelfEmployed
+- MasonsMarauders
+- SteelBeast
+- KellHounds
+- RazorbackMercs
+- HostileMercenaries
+- EmeraldDawn
+- SianTriumphant
+- ProfHorvat
+- RedHareRegiment
+- EdCorbu
+- DuchyOfAndurien
+- BlackCalderaDefense
+- GrayDeathLegion
+- HouseNakano
+- SelfEmployed_Yang
+- SecuritySolutionsInc
+- PaladinProtectionLLC
+- HouseKhulan
+- BlackWidowCompany
+- BountyHunterAssociates
+- SelfEmployed_Farah
+- SelfEmployed_Sumire
+- Moderbjorn
+- BaumannGroup
