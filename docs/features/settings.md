@@ -11,6 +11,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
 ```json
 {
   "DebugMode": true,
+  "VersionCheck": true,
   "DebugSkirmishMode": true,
   "DisableIfFlashpointContract": true,
   "RandomSpawns": {
@@ -22,11 +23,13 @@ Mission Control is designed from the very beginning to be entirely configurable 
     "Enable": true,
     "IncludeContractTypes": [],
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
+    "IsPrimaryObjectiveIn": ["SimpleBattle", "ThreeWayBattle"],
     "GuardOnHotDrop": false,
-    "EvasionPipsOnHotDrop": 4,
+    "EvasionPipsOnHotDrop": 6,
     "IncludeEnemies": true,
     "IncludeAllyTurrets": false,
-    "IncludeEnemyTurrets": false
+    "IncludeEnemyTurrets": false,
+    "MatchAllyLanceCountToEnemy": false
   },
   "AdditionalLances": {
     "Enable": true,
@@ -56,9 +59,29 @@ Mission Control is designed from the very beginning to be entirely configurable 
   },
   "ExtendedBoundaries": {
     "Enable": true,
-    "IncludeContractTypes": [],
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
-    "IncreaseBoundarySizeByPercentage": 0.3
+    "IncreaseBoundarySizeByPercentage": 0.3,
+    "Overrides": [
+      {
+        "MapId": "mapGeneral_frigidSteppes_iTnd",
+        "ContractTypeName": "CaptureBase",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "MapId": "mapGeneral_icyOutpost_iGlc",
+        "ContractTypeName": "CaptureBase",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "MapId": "mapGeneral_highPeak_iGlc",
+        "ContractTypeName": "SimpleBattle",
+        "IncreaseBoundarySizeByPercentage": 0.75
+      },
+      {
+        "ContractTypeName": "FireMission",
+        "IncreaseBoundarySizeByPercentage": 0.5
+      }
+    ]
   },
   "DynamicWithdraw": {
     "Enable": true,
@@ -67,6 +90,14 @@ Mission Control is designed from the very beginning to be entirely configurable 
     "MinDistanceForZone": 50,
     "MaxDistanceForZone": 400,
     "DisorderlyWithdrawalCompatibility": false
+  },
+  "AI": {
+    "FollowPlayer": {
+      "Target": "HeaviestMech",
+      "StopWhen": "OnEnemyDetected",
+      "MaxDistanceFromTargetBeforeSprinting": 120,
+      "TargetZoneRadius": 120
+    }
   }
 }
 ```
