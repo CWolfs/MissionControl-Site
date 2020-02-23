@@ -18,7 +18,7 @@ Extended boundaries can increase the size of the contract type / encounter bound
   "Overrides": [
     {
       "MapId": "mapGeneral_fallenHills_uDeso",
-      "ContractTypeName": "Battle",
+      "ContractTypeName": "SimpleBattle",
       "IncreaseBoundarySizeByPercentage": 0.4
     }
   ]

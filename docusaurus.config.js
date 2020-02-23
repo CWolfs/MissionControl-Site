@@ -28,8 +28,8 @@ module.exports = {
         { to: "blog", label: "Blog", position: "left" },
         {
           href:
-            "https://github.com/CWolfs/MissionControl/releases/download/v0.4.4/MissionControl-v0.4.4.zip",
-          label: "Download (0.4.4)",
+            "https://github.com/CWolfs/MissionControl/releases/download/v0.4.5/MissionControl-v0.4.5.zip",
+          label: "Download (0.4.5)",
           position: "left"
         },
         {
@@ -43,6 +43,10 @@ module.exports = {
           position: "left"
         },
         { to: "docs/support", label: "Support", position: "left" },
+        {
+          href: "https://www.patreon.com/cwolfs",
+          label: "Patreon"
+        },
         {
           href: "https://www.nexusmods.com/battletech/mods/319",
           label: "Nexus",
@@ -72,6 +76,10 @@ module.exports = {
             {
               label: "Support",
               to: "docs/support"
+            },
+            {
+              label: "Patreon",
+              href: "https://www.patreon.com/cwolfs"
             }
           ]
         },
