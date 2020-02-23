@@ -28,8 +28,8 @@ module.exports = {
         { to: "blog", label: "Blog", position: "left" },
         {
           href:
-            "https://github.com/CWolfs/MissionControl/releases/download/v0.4.5/MissionControl-v0.4.5.zip",
-          label: "Download (0.4.5)",
+            "https://github.com/CWolfs/MissionControl/releases/download/v0.4.6/MissionControl-v0.4.6.zip",
+          label: "Download (0.4.6)",
           position: "left"
         },
         {
