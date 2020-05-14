@@ -83,6 +83,8 @@ Tutorials and guides will be made soon to cover this in more detail.
 
 ## (Optional) Add an Encounter Ruleset for your contract type
 
+This step is optional. If you're not using [random spawns](../features/random-spawns) or [additional lances](../features/additional-lances) then you won't need to create this.
+
 As described in the [encounter rulesets](../features/encounter-rulesets.md) section, you can submit an `EncounterRuleset` to Mission Control to better control the features of Mission Control with your contract type.
 
 These features can be things like:

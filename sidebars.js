@@ -19,6 +19,7 @@ module.exports = {
     "Contract Type Builder": [
       "contract-builder/overview",
       "contract-builder/setup",
+      "contract-builder/api",
     ],
     "Suggestions & Feeback": ["support"],
   },
