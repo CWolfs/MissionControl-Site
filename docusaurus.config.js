@@ -21,43 +21,43 @@ module.exports = {
       title: "",
       logo: {
         alt: "Mission Control Logo",
-        src: "img/mc-logo.png"
+        src: "img/mc-logo.png",
       },
       links: [
         { to: "docs/overview/about", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
           href:
-            "https://github.com/CWolfs/MissionControl/releases/download/v0.4.6/MissionControl-v0.4.6.zip",
-          label: "Download (0.4.6)",
-          position: "left"
+            "https://github.com/CWolfs/MissionControl/releases/download/v1.0.0/MissionControl-v1.0.0.zip",
+          label: "Download (1.0.0)",
+          position: "left",
         },
         {
           to: "blog/tags/changelog",
           label: "Changelog",
-          position: "left"
+          position: "left",
         },
         {
           href: "https://discord.gg/22raTJh",
           label: "Discord",
-          position: "left"
+          position: "left",
         },
         { to: "docs/support", label: "Support", position: "left" },
         {
           href: "https://www.patreon.com/cwolfs",
-          label: "Patreon"
+          label: "Patreon",
         },
         {
           href: "https://www.nexusmods.com/battletech/mods/319",
           label: "Nexus",
-          position: "right"
+          position: "right",
         },
         {
           href: "https://github.com/CWolfs/MissionControl",
           label: "GitHub",
-          position: "right"
-        }
-      ]
+          position: "right",
+        },
+      ],
     },
     footer: {
       style: "dark",
@@ -67,72 +67,72 @@ module.exports = {
           items: [
             {
               label: "Docs",
-              to: "docs/overview/about"
+              to: "docs/overview/about",
             },
             {
               label: "Blog",
-              to: "blog"
+              to: "blog",
             },
             {
               label: "Support",
-              to: "docs/support"
+              to: "docs/support",
             },
             {
               label: "Patreon",
-              href: "https://www.patreon.com/cwolfs"
-            }
-          ]
+              href: "https://www.patreon.com/cwolfs",
+            },
+          ],
         },
         {
           title: "Community",
           items: [
             {
               label: "MC Discord",
-              href: "https://discord.gg/22raTJh"
+              href: "https://discord.gg/22raTJh",
             },
             {
               label: "BattleTech Game",
-              href: "http://harebrained-schemes.com/battletech/"
+              href: "http://harebrained-schemes.com/battletech/",
             },
             {
               label: "BattleTech Steam",
-              href: "http://store.steampowered.com/app/637090/BattleTech/"
-            }
-          ]
+              href: "http://store.steampowered.com/app/637090/BattleTech/",
+            },
+          ],
         },
         {
           title: "Links",
           items: [
             {
               label: "Github",
-              to: "https://github.com/CWolfs/MissionControl"
+              to: "https://github.com/CWolfs/MissionControl",
             },
             {
               label: "Nexus",
-              to: "https://www.nexusmods.com/battletech/mods/319"
-            }
-          ]
-        }
+              to: "https://www.nexusmods.com/battletech/mods/319",
+            },
+          ],
+        },
       ],
       logo: {
         alt: "CWolf Logo",
         src: "img/cwolf-logo.png",
-        href: "https://github.com/CWolfs"
+        href: "https://github.com/CWolfs",
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Richard 'CWolf' Griffiths`
-    }
+      copyright: `Copyright © ${new Date().getFullYear()} Richard 'CWolf' Griffiths`,
+    },
   },
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js")
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css")
-        }
-      }
-    ]
-  ]
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
+  ],
 };

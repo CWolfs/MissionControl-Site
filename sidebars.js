@@ -13,9 +13,13 @@ module.exports = {
       "features/dynamic-withdraw",
       "features/ai-behaviours",
       "features/quick-skirmish",
-      "features/combat-dialogue"
+      "features/combat-dialogue",
     ],
     Content: ["content/story", "content/procedural-contract-types"],
-    "Suggestions & Feeback": ["support"]
-  }
+    "Contract Type Builder": [
+      "contract-builder/overview",
+      "contract-builder/setup",
+    ],
+    "Suggestions & Feeback": ["support"],
+  },
 };
