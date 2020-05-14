@@ -10,6 +10,8 @@ Mission Control provides a very powerful system for create custom contract types
 
 A contract type is a high level concept for contracts. It is the type of contract like `Destroy Base` or `Capture Base`. For campaign story contracts a new contract type is used so, instead of a `Destroy Base` the contract type might be `Story 2 Three Years Later`.
 
+Multiple contract types can exist with a different `ID` and `Name` but the same `FriendlyName`. This allows different contract types to appear under the same name. For example, `Battle` contract type doesn't exist. It is two contract types called `SimpleBattle` and `ThreeWayBattle` with the same `FriendlyName` of `Battle`. You can make use of this to create lots of different contract types along the same theme if you want.
+
 The structure for a contract type is stored in BattleTech's Unity scene files so it's not easily accessible for modding. It defines all the logic of a contract, for example:
 
 - Where the lance spawns are

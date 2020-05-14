@@ -12,14 +12,8 @@ Encounter Rulesets are what control the manipulation of a mission/contract. To m
 Below is an example of the `AssassinateEncounterRules` used in Mission Control. We'll run through each bit of code to explain what is happening.
 
 ```clike
-using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-
 using BattleTech;
 
-using MissionControl.Trigger;
 using MissionControl.Logic;
 
 namespace MissionControl.Rules {
@@ -28,25 +22,22 @@ namespace MissionControl.Rules {
 
     public override void Build() {
       Main.Logger.Log("[AssassinateEncounterRules] Setting up rule object references");
-      BuildAi();
-      BuildSpawns();
+      BuildRandomSpawns();
       BuildAdditionalLances("AssassinateSpawn", SpawnLogic.LookDirection.AWAY_FROM_TARGET,
         "SpawnerPlayerLance", SpawnLogic.LookDirection.AWAY_FROM_TARGET, 25f, 100f);
     }
 
-    public void BuildAi() {
-      EncounterLogic.Add(new IssueFollowLanceOrderTrigger(new List<string>(){ "Employer" }, IssueAIOrderTo.ToLance, new List<string>() { "Player 1" }));
-    }
+    public void BuildRandomSpawns() {
+      if (!MissionControl.Instance.IsRandomSpawnsAllowed()) return;
 
-    public void BuildSpawns() {
       Main.Logger.Log("[AssassinateEncounterRules] Building spawns rules");
       EncounterLogic.Add(new SpawnLanceAtEdgeOfBoundary(this, "SpawnerPlayerLance", "AssassinateSpawn"));
-      EncounterLogic.Add(new SpawnLanceAnywhere(this, "AssassinateSpawn", "SpawnerPlayerLance", 400));
-      EncounterLogic.Add(new LookAtTarget(this, "SpawnerPlayerLance", "AssassinateSpawn"));
+      EncounterLogic.Add(new SpawnLanceAnywhere(this, "AssassinateSpawn", "SpawnerPlayerLance", 400, true));
+      EncounterLogic.Add(new LookAtTarget(this, "SpawnerPlayerLance", "AssassinateSpawn", true));
     }
 
     public override void LinkObjectReferences(string mapName) {
-      ObjectLookup.Add("AssassinateSpawn", EncounterLayerData.gameObject.FindRecursive("Lance_Enemy_AssassinationTarget"));
+      ObjectLookup["AssassinateSpawn"] = EncounterLayerData.gameObject.FindRecursive("Lance_Enemy_AssassinationTarget");
     }
   }
 }
@@ -67,7 +58,6 @@ To create a ruleset you must create a class and extend the `EncounterRules` supe
 ```clike
 public override void Build() {
   Main.Logger.Log("[AssassinateEncounterRules] Setting up rule object references");
-  BuildAi();
   BuildSpawns();
   BuildAdditionalLances("AssassinateSpawn", SpawnLogic.LookDirection.AWAY_FROM_TARGET,
     "SpawnerPlayerLance", SpawnLogic.LookDirection.AWAY_FROM_TARGET, 25f, 100f);
@@ -85,19 +75,19 @@ BuildAdditionalLances(TargetKeyToSpawnEnemyLancesAround, DirectionToLookAtInRela
 
 The target keys are bound at the bottom of the class with the `LinkObjectReferences` method. This will be explained in a moment.
 
-### Specify AI
+### Specify Custom Logic
 
-You can specify additional AI to be applied to the Core AI behaviour tree. You can do this as follows:
+You can specify custom logic to be applied in a contract type. You can do this as follows:
 
 ```clike
-public void BuildAi() {
-  EncounterLogic.Add(new IssueFollowLanceOrderTrigger(new List<string>(){ "Employer" }, IssueAIOrderTo.ToLance, new List<string>() { "Player 1" }));
+public void BuildCustomLogic() { // any method name, then call it from the Build() method
+  EncounterLogic.Add(new MyCustomLogic());
 }
 ```
 
-This method is for organisational purposes only. You can set up your AI logic in a method similar to this.
+This method is for organisational purposes only. You can set up your custom logic in a method similar to this.
 
-Two things are happening here. Firstly, you add a logic block relating to AI to the `EncounterLogic` property that is provided by the superclass `EncounterRules` your class has access to. The `EncounterLogic` list contains logic blocks of different type and that execute at different points in the game depending on their type. The main types are:
+Two things are happening here. Firstly, you would have previously created a custom logic block which contains your logic. Secondly, you add this logic block relating to your custom logic to the `EncounterLogic` property that is provided by the superclass `EncounterRules` your class has access to. The `EncounterLogic` list contains logic blocks of different type and that execute at different points in the game depending on their type. The main types are:
 
 - RESOURCE_REQUEST
 - CONTRACT_OVERRIDE_MANIPULATION
@@ -105,8 +95,6 @@ Two things are happening here. Firstly, you add a logic block relating to AI to 
 - SCENE_MANIPULATION
 
 and these types are executed in that order depending on when the game requires them to be executed.
-
-Secondly, the logic block you submit is the AI logic block for assigning all the found targets with tag `Employer` of type `Lance` to follow the lance with tag `Player 1`. This is used to allow allies who spawn on the encounter boundary to follow the player lance into combat and not get stuck.
 
 ### Build Spawns
 
