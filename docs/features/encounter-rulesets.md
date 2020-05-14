@@ -102,8 +102,8 @@ and these types are executed in that order depending on when the game requires t
 public void BuildSpawns() {
   Main.Logger.Log("[AssassinateEncounterRules] Building spawns rules");
   EncounterLogic.Add(new SpawnLanceAtEdgeOfBoundary(this, "SpawnerPlayerLance", "AssassinateSpawn"));
-  EncounterLogic.Add(new SpawnLanceAnywhere(this, "AssassinateSpawn", "SpawnerPlayerLance", 400));
-  EncounterLogic.Add(new LookAtTarget(this, "SpawnerPlayerLance", "AssassinateSpawn"));
+  EncounterLogic.Add(new SpawnLanceAnywhere(this, "AssassinateSpawn", "SpawnerPlayerLance", 400, true));
+  EncounterLogic.Add(new LookAtTarget(this, "SpawnerPlayerLance", "AssassinateSpawn", true));
 }
 ```
 
