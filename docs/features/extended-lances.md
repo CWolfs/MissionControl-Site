@@ -28,8 +28,8 @@ Extended lances can change the lance size of vanilla lance spawns and ones creat
     ],
     "6": [
       {
-      "Faction": "Comstar",
-      "DifficultyMod": -4
+        "Faction": "Comstar",
+        "DifficultyMod": -4
       }
     ],
   }
