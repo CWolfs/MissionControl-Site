@@ -64,11 +64,11 @@ For every map the contract type is set up to run on a `.jsonc` for map specific 
 }
 ```
 
-## Encounter Layer Id
+### Encounter Layer Id
 
 This must be the exact `EncounterLayerId` set in your encounter layer you created (see [Setup - Create an encounter layer](setup)). This allows you to have multiple override files for the same map and same contact type if you created a second encounter layer for it.
 
-## Overrides
+### Overrides
 
 This allows you to specify which information from `common.jsonc` to override. The format of overrides is the [Json.NET query/select system](https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm).
 
