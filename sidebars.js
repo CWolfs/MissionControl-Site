@@ -21,7 +21,12 @@ module.exports = {
       "contract-builder/setup",
       "contract-builder/structure",
     ],
-    "Contract Type Builder API": ["contract-builder-api/chunks"],
+    "Contract Type Builder API": [
+      "contract-builder-api/chunks",
+      "contract-builder-api/overrides",
+      "contract-builder-api/plots",
+      "contract-builder-api/triggers",
+    ],
     "Suggestions & Feeback": ["support"],
   },
 };
