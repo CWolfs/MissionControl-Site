@@ -32,7 +32,7 @@ Under a chunk you create `Node` children. A node is a specific logic piece like 
 | Guid                 | false    | -       | Can be used to manually specify a Guid for use by other chunks, triggers, results or conditions |
 | Children             | false    | `[]`    | An array of [Nodes](nodes) that specify logic to execute                                        |
 
-### Chunk Types
+### Chunk SubTypes
 
 | Type              | Details                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------- |
