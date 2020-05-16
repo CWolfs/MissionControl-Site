@@ -23,6 +23,7 @@ module.exports = {
     ],
     "Contract Type Builder API": [
       "contract-builder-api/chunks",
+      "contract-builder-api/nodes",
       "contract-builder-api/overrides",
       "contract-builder-api/plots",
       "contract-builder-api/triggers",
