@@ -23,7 +23,7 @@ A node is a logic object that is added to the contract type encounter. It can be
 | Type     | true     | -       | Type of node                                                 |
 | SubType  | true     | -       | Subtype of node                                              |
 
-### Node SubTypes
+### Node Types
 
 | Type          | Details                                                                   |
 | ------------- | ------------------------------------------------------------------------- |
