@@ -15,22 +15,38 @@ Under a chunk you create `Node` children. A node is a specific logic piece like 
   "Name": "Chunk_Optional_Initial_Enemy",
   "Type": "Chunk",
   "SubType": "Lance",
-  "ControlledByContract": true,
-  "Guid": "3b47894e-2d25-4599-9b47-620ab8fcfa62",
+  "StartingStatus": "Inactive", // Optional
+  "ConflictsWith": ["9c65494e-4e1a-1234-9b47-666ab8fc1111"], // Optional
+  "OnActiveExecute": [
+    // Optional
+    {
+      "Type": "Dialogue",
+      "EncounterGuid": "e0ca3227-ffbf-4088-a261-3d4e9ab7d4c5"
+    },
+    {
+      "Type": "SetChunkStateAtRandom",
+      "ChunkGuids": ["c27a41c7-ae4d-4a97-90be-3e710fe31e22"]
+    }
+  ],
+  "ControlledByContract": true, // Optional
+  "Guid": "3b47894e-2d25-4599-9b47-620ab8fcfa62", // Optional
   "Children": [
     // Children nodes
   ]
 }
 ```
 
-| Property             | Required | Default | Details                                                                                         |
-| -------------------- | -------- | ------- | ----------------------------------------------------------------------------------------------- |
-| Name                 | true     | -       | Name of the chunk that will be used for the Unity game object                                   |
-| Type                 | true     | -       | Type of node                                                                                    |
-| SubType              | true     | -       | Subtype of chunk                                                                                |
-| ControlledByContract | false    | `false` | Exposes the chunk to be enabled/disabled in the contract .json under 'chunkList'                |
-| Guid                 | false    | -       | Can be used to manually specify a Guid for use by other chunks, triggers, results or conditions |
-| Children             | false    | `[]`    | An array of [Nodes](nodes) that specify logic to execute                                        |
+| Property             | Required | Default  | Details                                                                                           |
+| -------------------- | -------- | -------- | ------------------------------------------------------------------------------------------------- |
+| Name                 | true     | -        | Name of the chunk that will be used for the Unity game object                                     |
+| Type                 | true     | -        | Type of node                                                                                      |
+| SubType              | true     | -        | Subtype of chunk                                                                                  |
+| StartingStatus       | false    | `Active` | Determines the starting status. `Active`, `Inactive`, `Finished`                                  |
+| ConflictsWith        | false    | `[]`     | Sets which chunks would conflict with this one. Important for ensuring no loose ending conditions |
+| OnActiveExecute      | false    | `[]`     | Sets which logic to execute when this chunk is changed from `Inactive` to `Active`                |
+| ControlledByContract | false    | `false`  | Exposes the chunk to be enabled/disabled in the contract .json under 'chunkList'                  |
+| Guid                 | false    | -        | Can be used to manually specify a Guid for use by other chunks, triggers, results or conditions   |
+| Children             | false    | `[]`     | An array of [Nodes](nodes) that specify logic to execute                                          |
 
 ### Chunk SubTypes
 
