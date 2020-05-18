@@ -15,6 +15,10 @@ Extended lances can change the lance size of vanilla lance spawns and ones creat
 "ExtendedLances": {
   "Enable": true,
   "Autofill": true,
+  "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
+  "SkipWhenTaggedWithAny": ["lance_type_solo"],
+  "SkipWhenTaggedWithAll": [],
+  "SkipWhenExcludeTagsContain": ["no_extended_lance"],
   "LanceSizes": {
     "5": [
       {
@@ -36,11 +40,14 @@ Extended lances can change the lance size of vanilla lance spawns and ones creat
 }
 ```
 
-| Path         | Required? | Default | Details                                                                                                                                     |
-| ------------ | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Enable`     | Optional  | true    | Should this feature be enabled or not?                                                                                                      |
-| `Autofill`   | Optional  | true    | If a lance is selected for a spawn that has below the require number of units - should Extended Lances fill the lance up to the right size? |
-| `LanceSizes` | Optional  | N/A     | Sets which faction should have higher lance sizes. By default all faction lances are 4 units like vanilla.                                  |
+| Path                       | Required? | Default                 | Details                                                                                                                                                             |
+| -------------------------- | --------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Enable`                   | Optional  | true                    | Should this feature be enabled or not?                                                                                                                              |
+| `Autofill`                 | Optional  | true                    | If `true`, EL will attempt to autofill a lance up to the lance size set below under `LanceSizes`. This is currently just a copy of the unit in the first lance slot |
+| SkipWhenTaggedWithAny      | Optional  | `["lance_type_solo"]`   | Skip if ANY of the set tags exist under a lance `lanceTagSet` in the contract override JSON being used                                                              |
+| SkipWhenTaggedWithAll      | Optional  | `[]`                    | Skip if ALL of the set tags exist under a lance `lanceTagSet` in the contract override JSON being used                                                              |
+| SkipWhenExcludeTagsContain | Optional  | `["no_extended_lance"]` | Skip if ANY of the set tags exist under a lance `lanceExcludedTagSet` in the contract override JSON                                                                 |
+| `LanceSizes`               | Optional  | N/A                     | Sets which faction should have higher lance sizes. By default all faction lances are 4 units like vanilla.                                                          |
 
 ### Lance Sizes
 
