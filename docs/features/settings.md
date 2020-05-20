@@ -123,24 +123,24 @@ Mission Control is designed from the very beginning to be entirely configurable 
 
 ### Settings Breakdown
 
-| Path                        | Default                                | Example | Details                                                                                                 |
-| --------------------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
-| DebugMode                   | `false`                                | N/A     | Enable debug logging and debug skirmish mode, if it's enabled                                           |
-| VersionCheck                | `true`                                 | N/A     | Controls if the MC version checker runs and displays a 'You should update' popup when github MC updates |
-| DebugSkirmishMode           | `false`                                | N/A     | Enables the 'Quick Skirmish' feature                                                                    |
-| DisableIfFlashpointContract | `true`                                 | N/A     | Disables MC for Flashpoints if `true`                                                                   |
-| RandomSpawns                | [See Random Spawn Docs](random-spawns) | N/A     | Random spawn settings                                                                                   |
-| HotDrop                     | [Object](#hot-drop-protection)         | N/A     | Hot drop protection protects you with extra evasion and brace/guard if dropped close to enemies         |
-| AdditionalLances            | [Object](#additional-lances)           | N/A     | Settings for dropping extra support lances into maps (allies and enemies)                               |
-| ExtendedLances              | [Object](#extended-lances)             | N/A     | Settings for controlled extra lance spawns for AI lances (e.g. clan stars)                              |
-| ExtendedBoundaries          | [Object](#extended-boundaries)         | N/A     | Settings for increasing the boundaries of the encounters / maps                                         |
-| DynamicWithdraw             | [Object](#dynamic-withdraw)            | N/A     | Settings for having a real withdraw. A extraction point appears and you must get there                  |
-| AI                          | [Object](#ai)                          | N/A     | Settings for AI                                                                                         |
-| Spawners                    | [Object](#spawners)                    | N/A     | Settings for the spawn system                                                                           |
+| Path                        | Default                          | Example | Details                                                                                                 |
+| --------------------------- | -------------------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| DebugMode                   | `false`                          | N/A     | Enable debug logging and debug skirmish mode, if it's enabled                                           |
+| VersionCheck                | `true`                           | N/A     | Controls if the MC version checker runs and displays a 'You should update' popup when github MC updates |
+| DebugSkirmishMode           | `false`                          | N/A     | Enables the 'Quick Skirmish' feature                                                                    |
+| DisableIfFlashpointContract | `true`                           | N/A     | Disables MC for Flashpoints if `true`                                                                   |
+| RandomSpawns                | [Object](random-spawns.md)       | N/A     | Random spawn settings                                                                                   |
+| HotDrop                     | [Object](#hot-drop-protection)   | N/A     | Hot drop protection protects you with extra evasion and brace/guard if dropped close to enemies         |
+| AdditionalLances            | [Object](#additional-lances)     | N/A     | Settings for dropping extra support lances into maps (allies and enemies)                               |
+| ExtendedLances              | [Object](extended-lances.md)     | N/A     | Settings for controlled extra lance spawns for AI lances (e.g. clan stars)                              |
+| ExtendedBoundaries          | [Object](extended-boundaries.md) | N/A     | Settings for increasing the boundaries of the encounters / maps                                         |
+| DynamicWithdraw             | [Object](dynamic-withdraw.md)    | N/A     | Settings for having a real withdraw. A extraction point appears and you must get there                  |
+| AI                          | [Object](#ai)                    | N/A     | Settings for AI                                                                                         |
+| Spawners                    | [Object](#spawners)              | N/A     | Settings for the spawn system                                                                           |
 
 ### Random Spawns
 
-See [Random Spawn Docs](random-spawns).
+See [Random Spawn Docs](random-spawns.md).
 
 ### Hot Drop Protection
 
@@ -198,15 +198,15 @@ See [Random Spawn Docs](random-spawns).
 
 ### Extended Lances
 
-See [Extended Lances Docs](extended-lances).
+See [Extended Lances Docs](extended-lances.md).
 
 ### Extended Boundaries
 
-See [Extended Boundaries Docs](extended-boundaries).
+See [Extended Boundaries Docs](extended-boundaries.md).
 
 ### Dynamic Withdraw
 
-See [Dynamic Withdraw Docs](dynamic-withdraw)
+See [Dynamic Withdraw Docs](dynamic-withdraw.md)
 
 ### AI
 
