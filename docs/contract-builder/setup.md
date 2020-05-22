@@ -46,7 +46,7 @@ If using Mission Control's system:
 - Create a folder with your contract type name under `MissionControl/overrides/encounterLayers`. For example, if your contract type is called `Invasion` then call it `invasion`.
 - For the map you wish your contract type to be playable on, you must create a json file here.
 - Name the file `encounterLayer_{contractTypeName}.{mapName}.json`, for example `encounterLayer_soloDuel.mapStory_StoryEncounter3_mMoon_craters`
-- Any ID that looks like `73b9ebfe-b62b-4ffb-87b9-a0191d2530b3` are `uuid v4`. You can generate these easily by visiting https://www.uuidgenerator.net/
+- Any IDs that looks like `73b9ebfe-b62b-4ffb-87b9-a0191d2530b3` are `uuid v4`. You can generate these easily by visiting https://www.uuidgenerator.net/
 
 Inside the file add the following, but changing what you require:
 
