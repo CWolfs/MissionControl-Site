@@ -43,3 +43,11 @@
 table tr:nth-child(2n) {
   background-color: #2a2b2f;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #ffaa00;
+}

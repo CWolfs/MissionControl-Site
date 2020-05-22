@@ -84,7 +84,20 @@ Tutorials and guides will be made soon to cover this in more detail.
 
 ## (Optional) Add an Encounter Ruleset for your contract type
 
-This step is optional. If you're not using [random spawns](../features/random-spawns) or [additional lances](../features/additional-lances) then you won't need to create this.
+This step is optional, however, with some special conditions.
+
+### If you don't want to use Random Spawns & Additional Lances
+
+If you're not using [random spawns](../features/random-spawns) or [additional lances](../features/additional-lances) then you won't need to create this.
+
+### If you want to use Random Spawns & Additional Lances, but don't want to create an Encounter Ruleset
+
+If you do not want to create an Encounter Ruleset and still want Random Spawns or Additional Lances to work you **must** following the following convention:
+
+- Name your Player spawner `Spawner_PlayerLance`
+- Name your main opposing force spawner `Lance_Enemy_OpposingForce`
+
+### If you're willing to create an Encounter Ruleset for more control
 
 As described in the [encounter rulesets](../features/encounter-rulesets.md) section, you can submit an `EncounterRuleset` to Mission Control to better control the features of Mission Control with your contract type.
 
