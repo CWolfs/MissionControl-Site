@@ -45,10 +45,10 @@ Mission Control is designed from the very beginning to be entirely configurable 
     "MatchAllyLanceCountToEnemy": false,
     "DropWeightInfluence": {
       "Enable": false,
-      "GlobalEnemyChanceToSpawn": 0.05,
-      "GlobalAllyChanceToSpawn": 0.8,
-      "EnemySpawnInfluencePerHalfSkull": 0.1,
-      "AllySpawnInfluencePerHalfSkull": -0.1
+      "EnemySpawnInfluencePerHalfSkullAbove": 0.1,
+      "AllySpawnInfluencePerHalfSkullAbove": -0.1,
+      "EnemySpawnInfluencePerHalfSkullBelow": 0.1,
+      "AllySpawnInfluencePerHalfSkullBelow": -0.1
     },
     "DisableAllies": false,
     "DisableEnemies": false
@@ -188,13 +188,13 @@ See [Random Spawn Docs](random-spawns.md).
 
 ### Additional Lances - Drop Weight Influence
 
-| Path                            | Default | Example | Details                                                                                      |
-| ------------------------------- | ------- | ------- | -------------------------------------------------------------------------------------------- |
-| Enable                          | `false` | N/A     | Enables the feature of Drop Weight Influence                                                 |
-| GlobalEnemyChanceToSpawn        | `0.05`  | N/A     | The initial starting chance to spawn enemies before modifiers                                |
-| GlobalAllyChanceToSpawn         | `0.8`   | N/A     | The initial starting chance to spawn allies before modifiers                                 |
-| EnemySpawnInfluencePerHalfSkull | `0.1`   | N/A     | The modifier to apply to `GlobalEnemyChanceToSpawn` for every 1/2 skull (1 difficulty) level |
-| AllySpawnInfluencePerHalfSkull  | `-0.1`  | N/A     | The modifier to apply to `GlobalAllyChanceToSpawn` for every 1/2 skull (1 difficulty) level  |
+| Path                                 | Default | Example | Details                                                                                                                                                                                                                                              |
+| ------------------------------------ | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable                               | `false` | N/A     | Enables the feature of Drop Weight Influence                                                                                                                                                                                                         |
+| EnemySpawnInfluencePerHalfSkullAbove | `0.1`   | N/A     | The modifier to apply to the normal enemy AL `Chance` for every 1/2 skull difference between player drop force drop skull rating/difficulty vs. contact skull rating/difficulty. This modifier is for when the player is stronger than the contract. |
+| AllySpawnInfluencePerHalfSkullAbove  | `-0.1`  | N/A     | The modifier to apply to the normal ally AL `Chance` for every 1/2 skull difference between player drop force drop skull rating/difficulty vs. contact skull rating/difficulty. This modifier is for when the player is stronger than the contract.  |
+| EnemySpawnInfluencePerHalfSkullBelow | `0.1`   | N/A     | The modifier to apply to the normal enemy AL `Chance` for every 1/2 skull difference between player drop force drop skull rating/difficulty vs. contact skull rating/difficulty. This modifier is for when the player is weaker than the contract.   |
+| AllySpawnInfluencePerHalfSkullBelow  | `-0.1`  | N/A     | The modifier to apply to the normal ally AL `Chance` for every 1/2 skull difference between player drop force drop skull rating/difficulty vs. contact skull rating/difficulty. This modifier is for when the player is weaker than the contract.    |
 
 ### Extended Lances
 
