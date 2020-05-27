@@ -24,6 +24,18 @@ module.exports = {
     "Contract Type Builder API": [
       "contract-builder-api/chunks",
       "contract-builder-api/nodes",
+      {
+        type: "category",
+        label: "Nodes API",
+        items: [
+          "contract-builder-api/nodes/contract-edit",
+          "contract-builder-api/nodes/dialogue",
+          "contract-builder-api/nodes/objective",
+          "contract-builder-api/nodes/region",
+          "contract-builder-api/nodes/spawner",
+          "contract-builder-api/nodes/swap-placement",
+        ],
+      },
       "contract-builder-api/overrides",
       "contract-builder-api/plots",
       "contract-builder-api/triggers",
