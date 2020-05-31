@@ -6,7 +6,7 @@ sidebar_label: Contract Edit
 
 The `ContractEdit` node allows for editing the contract override data from within the contract itself. This would then be only used after the combat has ended.
 
-This can be useful for various things like affecting who the contract employer is so your employer is now your target and vise versa.
+This can be useful for various things like affecting who the contract employer is so your employer is now your target and vice versa.
 
 ## SwapTeamFactions
 
