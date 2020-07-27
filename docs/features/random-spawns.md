@@ -8,6 +8,7 @@ Depending on the contract type, the lance spawns will change every playthrough. 
 ```json
 "RandomSpawns": {
   "Enable": true,
+  "EnableForFlashpoints": true,
   "IncludeContractTypes": [],
   "ExcludeContractTypes": ["SoloDuel", "DuoDuel"]
 }
@@ -18,5 +19,6 @@ Depending on the contract type, the lance spawns will change every playthrough. 
 | Path                   | Required? | Default            | Details                                                                                                                                     |
 | ---------------------- | --------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Enable`               | Optional  | `true`             | Should this feature be enabled or not?                                                                                                      |
+| `EnableForFlashpoints` | Optional  | `true`             | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                     |
 | `IncludeContractTypes` | Optional  | All contract types | When set, it overrides `ExcludeContractTypes` for this level                                                                                |
 | `ExcludeContractTypes` | Optional  | No contract types  | Allows you to explicitly exclude boundary changes for all teams for the specified contract types. Not used if `IncludeContractTypes` is set |
