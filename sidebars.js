@@ -36,6 +36,7 @@ module.exports = {
           "contract-builder-api/nodes/swap-placement",
         ],
       },
+      "contract-builder-api/ai-orders",
       "contract-builder-api/overrides",
       "contract-builder-api/plots",
       "contract-builder-api/triggers",
