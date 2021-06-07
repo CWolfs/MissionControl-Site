@@ -15,6 +15,7 @@ Extended lances can change the lance size of vanilla lance spawns and ones creat
 "ExtendedLances": {
   "Enable": true,
   "EnableForFlashpoints": true,
+  "EnableForStory": false,
   "Autofill": true,
   "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
   "SkipWhenTaggedWithAny": ["lance_type_solo"],
@@ -45,6 +46,7 @@ Extended lances can change the lance size of vanilla lance spawns and ones creat
 | -------------------------- | --------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Enable`                   | Optional  | true                    | Should this feature be enabled or not?                                                                                                                              |
 | `EnableForFlashpoints`     | Optional  | true                    | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                                             |
+| `EnableForStory`           | Optional  | false                   | Enable feature for Story if `EnableStoryOverrides` is `true`                                                                                                        |
 | `Autofill`                 | Optional  | true                    | If `true`, EL will attempt to autofill a lance up to the lance size set below under `LanceSizes`. This is currently just a copy of the unit in the first lance slot |
 | SkipWhenTaggedWithAny      | Optional  | `["lance_type_solo"]`   | Skip if ANY of the set tags exist under a lance `lanceTagSet` in the contract override JSON being used                                                              |
 | SkipWhenTaggedWithAll      | Optional  | `[]`                    | Skip if ALL of the set tags exist under a lance `lanceTagSet` in the contract override JSON being used                                                              |

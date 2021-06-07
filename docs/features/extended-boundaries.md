@@ -13,6 +13,7 @@ Extended boundaries can increase the size of the contract type / encounter bound
 "ExtendedBoundaries": {
   "Enable": true,
   "EnableForFlashpoints": true,
+  "EnableForStory": false,
   "IncludeContractTypes": [],
   "ExcludeContractTypes": [],
   "IncreaseBoundarySizeByPercentage": 0.3,
@@ -30,6 +31,7 @@ Extended boundaries can increase the size of the contract type / encounter bound
 | ---------------------------------- | --------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Enable`                           | Optional  | `true`             | `true` or `false`                                                                                                                                                   | Should this feature be enabled or not?                                                                                                      |
 | `EnableForFlashpoints`             | Optional  | `true`             | `true` or `false`                                                                                                                                                   | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                     |
+| `EnableForStory`                   | Optional  | `false`            | `true` or `false`                                                                                                                                                   | Enable feature for Story if `EnableStoryOverrides` is `true`                                                                                |
 | `IncludeContractTypes`             | Optional  | All contract types | `["Rescue", "DestroyBase"]` would limit bounday changes to these two contract types <br /><br /> `[]` would fallback to default                                     | When set, it overrides `ExcludeContractTypes` for this level                                                                                |
 | `ExcludeContractTypes`             | Optional  | No contract types  | `["Assasinate", "CaptureBase"]` would remove these two contract types from the entire list of available contract types. <br /><br /> `[]` would fallback to default | Allows you to explicitly exclude boundary changes for all teams for the specified contract types. Not used if `IncludeContractTypes` is set |
 | `IncreaseBoundarySizeByPercentage` | Optional  | `0.2`              | `0.1` 10%, `1` max size                                                                                                                                             | Percentage of the current boundary to increase the boundary by                                                                              |

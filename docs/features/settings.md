@@ -9,18 +9,22 @@ Mission Control is designed from the very beginning to be entirely configurable 
 {
   "DebugMode": true,
   "VersionCheck": true,
-  "DebugSkirmishMode": true,
+  "EnableSkirmishMode": true,
+  "DebugSkirmishMode": false,
   "EnableFlashpointOverrides": false,
   "EnableAdditionalPlayerMechsForFlashpoints": false,
+  "EnableStoryOverrides": false,
   "EnableAdditionalPlayerMechsForStory": false,
   "RandomSpawns": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"]
   },
   "HotDropProtection": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "GuardOnHotDrop": false,
     "EvasionPipsOnHotDrop": 6,
@@ -31,6 +35,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
   "AdditionalLances": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "IsPrimaryObjectiveIn": ["SimpleBattle", "CaptureBase"],
     "ExcludeFromAutocomplete": ["DefendBase", "FireMission"],
@@ -61,6 +66,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
   "ExtendedLances": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "Autofill": true,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "SkipWhenTaggedWithAny": ["lance_type_solo"],
@@ -74,6 +80,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
   "ExtendedBoundaries": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "IncreaseBoundarySizeByPercentage": 0.3,
     "Overrides": [
@@ -106,6 +113,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
   "DynamicWithdraw": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "MinDistanceForZone": 50,
     "MaxDistanceForZone": 288,
@@ -133,22 +141,24 @@ Mission Control is designed from the very beginning to be entirely configurable 
 
 ### Settings Breakdown
 
-| Path                                      | Default                          | Example | Details                                                                                                                  |
-| ----------------------------------------- | -------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| DebugMode                                 | `false`                          | N/A     | Enable debug logging and debug skirmish mode, if it's enabled                                                            |
-| VersionCheck                              | `true`                           | N/A     | Controls if the MC version checker runs and displays a 'You should update' popup when github MC updates                  |
-| DebugSkirmishMode                         | `false`                          | N/A     | Enables the 'Quick Skirmish' feature                                                                                     |
-| EnableFlashpointOverrides                 | `false`                          | N/A     | Enables MC for Flashpoints if `true` and MC setting's have their respective `EnableForFlashpoints` enabled               |
-| EnableAdditionalPlayerMechsForFlashpoints | `false`                          | N/A     | Enables 'Bigger Drops' support for Flashpoints if `true` without the other MC features being turned on                   |
-| EnableAdditionalPlayerMechsForStory       | `false`                          | N/A     | Enables 'Bigger Drops' support for Story & Restoration contracts if `true` without the other MC features being turned on |
-| RandomSpawns                              | [Object](random-spawns.md)       | N/A     | Random spawn settings                                                                                                    |
-| HotDropProtection                         | [Object](#hot-drop-protection)   | N/A     | Hot drop protection protects you with extra evasion and brace/guard if dropped close to enemies                          |
-| AdditionalLances                          | [Object](#additional-lances)     | N/A     | Settings for dropping extra support lances into maps (allies and enemies)                                                |
-| ExtendedLances                            | [Object](extended-lances.md)     | N/A     | Settings for controlled extra lance spawns for AI lances (e.g. clan stars)                                               |
-| ExtendedBoundaries                        | [Object](extended-boundaries.md) | N/A     | Settings for increasing the boundaries of the encounters / maps                                                          |
-| DynamicWithdraw                           | [Object](dynamic-withdraw.md)    | N/A     | Settings for having a real withdraw. A extraction point appears and you must get there                                   |
-| AI                                        | [Object](#ai)                    | N/A     | Settings for AI                                                                                                          |
-| Spawners                                  | [Object](#spawners)              | N/A     | Settings for the spawn system                                                                                            |
+| Path                                      | Default                          | Example | Details                                                                                                                      |
+| ----------------------------------------- | -------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| DebugMode                                 | `false`                          | N/A     | Enable debug logging and debug skirmish mode, if it's enabled                                                                |
+| VersionCheck                              | `true`                           | N/A     | Controls if the MC version checker runs and displays a 'You should update' popup when github MC updates                      |
+| EnableSkirmishMode                        | `true`                           | N/A     | Enables Skirmish to use MC features. This is overridden by DebugSkirmishMode` if both are enabled                            |
+| DebugSkirmishMode                         | `false`                          | N/A     | Enables the 'Quick Skirmish' feature and spawns the player next to the enemy lance. Takes priority over `EnableSkirmishMode` |
+| EnableFlashpointOverrides                 | `false`                          | N/A     | Enables MC for Flashpoints if `true` and MC setting's have their respective `EnableForFlashpoints` enabled                   |
+| EnableAdditionalPlayerMechsForFlashpoints | `false`                          | N/A     | Enables 'Bigger Drops' support for Flashpoints if `true` without the other MC features being turned on                       |
+| EnableStoryOverrides                      | `false`                          | N/A     | Enables MC for Story & Restoration contracts if `true` and MC setting's have their respective `EnableForStory` enabled       |
+| EnableAdditionalPlayerMechsForStory       | `false`                          | N/A     | Enables 'Bigger Drops' support for Story & Restoration contracts if `true` without the other MC features being turned on     |
+| RandomSpawns                              | [Object](random-spawns.md)       | N/A     | Random spawn settings                                                                                                        |
+| HotDropProtection                         | [Object](#hot-drop-protection)   | N/A     | Hot drop protection protects you with extra evasion and brace/guard if dropped close to enemies                              |
+| AdditionalLances                          | [Object](#additional-lances)     | N/A     | Settings for dropping extra support lances into maps (allies and enemies)                                                    |
+| ExtendedLances                            | [Object](extended-lances.md)     | N/A     | Settings for controlled extra lance spawns for AI lances (e.g. clan stars)                                                   |
+| ExtendedBoundaries                        | [Object](extended-boundaries.md) | N/A     | Settings for increasing the boundaries of the encounters / maps                                                              |
+| DynamicWithdraw                           | [Object](dynamic-withdraw.md)    | N/A     | Settings for having a real withdraw. A extraction point appears and you must get there                                       |
+| AI                                        | [Object](#ai)                    | N/A     | Settings for AI                                                                                                              |
+| Spawners                                  | [Object](#spawners)              | N/A     | Settings for the spawn system                                                                                                |
 
 ### Random Spawns
 
@@ -162,6 +172,7 @@ See [Random Spawn Docs](random-spawns.md).
 | -------------------- | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Enable               | `true`   | N/A               | Enables the feature of hot drop protection                                                                                                                          |
 | EnableForFlashpoints | `true`   | N/A               | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                                             |
+| EnableForStory       | `false`  | N/A               | Enable feature for Story if `EnableStoryOverrides` is `true`                                                                                                        |
 | ExcludeContractTypes | Optional | No contract types | `["Assasinate", "CaptureBase"]` would remove these two contract types from the entire list of available contract types. <br /><br /> `[]` would fallback to default | Allows you to explicitly exclude additional lance spawns for all teams for the specified contract types. Not used if `IncludeContractTypes` is set |
 | GuardOnHotDrop       | `false`  | N/A               | Enables guard/brace protection bonus in a hot drop                                                                                                                  |
 | EvasionPipsOnHotDrop | `6`      | N/A               | Sets evasion to 6 in a hot drop                                                                                                                                     |
@@ -175,6 +186,7 @@ See [Random Spawn Docs](random-spawns.md).
 | ------------------------------------- | ------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Enable                                | `true`                                                  | N/A                | Enables the feature of Additional Lances                                                                                                                                                                                                                          |
 | EnableForFlashpoints                  | `true`                                                  | N/A                | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                                                                                                                                           |
+| EnableForStory                        | `false`                                                 | N/A                | Enable feature for Story if `EnableStoryOverrides` is `true`                                                                                                                                                                                                      |
 | ExcludeContractTypes                  | Optional                                                | No contract types  | `["Assasinate", "CaptureBase"]` would remove these two contract types from the entire list of available contract types. <br /><br /> `[]` would fallback to default                                                                                               | Allows you to explicitly exclude additional lance spawns for all teams for the specified contract types. Not used if `IncludeContractTypes` is set |
 | IsPrimaryObjectiveIn                  | `[]`                                                    | `["SimpleBattle"]` | Sets contract types where the additional lances are classed as primary objectives so they would need to be destroyed to end a mission                                                                                                                             |
 | HideObjective                         | `true`                                                  | N/A                | Hides the 'Destroy Support Lance' objective                                                                                                                                                                                                                       |

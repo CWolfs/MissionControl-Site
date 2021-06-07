@@ -9,6 +9,7 @@ When being forced to withdraw and extraction zone appears for you. You must extr
   "DynamicWithdraw": {
     "Enable": true,
     "EnableForFlashpoints": true,
+    "EnableForStory": false,
     "IncludeContractTypes": [],
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "MinDistanceForZone": 50,
@@ -23,6 +24,7 @@ When being forced to withdraw and extraction zone appears for you. You must extr
 | ----------------------------------- | --------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Enable`                            | Optional  | `true`             | Should this feature be enabled or not?                                                                                                                                                             |
 | `EnableForFlashpoints`              | Optional  | `true`             | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                                                                            |
+| `EnableForStory`                    | Optional  | `false`            | Enable feature for Story if `EnableStoryOverrides` is `true`                                                                                                                                       |
 | `IncludeContractTypes`              | Optional  | All contract types | When set, it overrides `ExcludeContractTypes` for this level                                                                                                                                       |
 | `ExcludeContractTypes`              | Optional  | No contract types  | Allows you to explicitly exclude boundary changes for all teams for the specified contract types. Not used if `IncludeContractTypes` is set                                                        |
 | `MinDistanceForZone`                | Optional  | `50`               | Minimum distance to generate the extraction zone from the calculate centroid position of all player mechs, with an avoidance modifier for all enemies in the map                                   |
