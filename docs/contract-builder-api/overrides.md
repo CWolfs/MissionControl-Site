@@ -15,6 +15,10 @@ As much as you can reuse, there will always be bits of your contract type that a
 
 The override files look different to the `common.jsonc` file structure. It uses the [Json.NET query/select system](https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm) system to select parts of your `common.jsonc` and change the data with newly specified data.
 
+A good way to learn is to open up the Mission Control mod folder and read the files in `MissionControl/contractTypeBuilds/(ContactType)`.
+
+The naming convention for override files is freeform, however, MissionControl uses: `mapname_descriptivevariation`, for example `deathvalley_desert_open_area` where the map is `mapArena_deathValley_aDes` and this override limits the contract type to take place in the open area of that map. You can have multiple overrides for the same map and contract type combination as long as a unique 'encounter layer' is created per variation.
+
 ## Override Structure
 
 ```json
