@@ -40,6 +40,13 @@ module.exports = {
       "contract-builder-api/overrides",
       "contract-builder-api/plots",
       "contract-builder-api/triggers",
+      {
+        type: "category",
+        label: "Trigger Conditionals",
+        items: [
+          "contract-builder-api/trigger-conditionals/always-true-conditional",
+        ],
+      },
     ],
     "Suggestions & Feeback": ["support"],
   },
