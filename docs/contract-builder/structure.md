@@ -73,3 +73,5 @@ This must be the exact `EncounterLayerId` set in your encounter layer you create
 This allows you to specify which information from `common.jsonc` to override. The format of overrides is the [Json.NET query/select system](https://www.newtonsoft.com/json/help/html/QueryJsonSelectTokenJsonPath.htm).
 
 An example of information to override would be turning on a `Plot` specific to a map, setting the lance spawn positions or setting the encounter boundary size and position.
+
+Read the [Overrides API](../contract-builder-api/overrides.md) section for detailed information.
