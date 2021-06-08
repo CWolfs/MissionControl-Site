@@ -8,8 +8,6 @@ The `AlwaysTrueConditional` conditional auto-passes as soon as it's run. It's us
 
 ## AlwaysTrueConditional
 
-This node swaps the contract override's employer and target team.
-
 | Property | Required | Default                 | Details |
 | -------- | -------- | ----------------------- | ------- |
 | Type     | true     | `AlwaysTrueConditional` | -       |

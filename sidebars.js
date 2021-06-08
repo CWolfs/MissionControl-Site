@@ -45,6 +45,7 @@ module.exports = {
         label: "Trigger Conditionals",
         items: [
           "contract-builder-api/trigger-conditionals/always-true-conditional",
+          "contract-builder-api/trigger-conditionals/objective-status-conditional",
         ],
       },
     ],
