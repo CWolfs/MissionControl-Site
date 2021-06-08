@@ -4,7 +4,7 @@ title: Encounter Object Matches State Conditional
 sidebar_label: Encounter Object Matches State
 ---
 
-The `EncounterObjectMatchesStateConditional` conditional checks multiple objectives by their GUID and checks the statuses of them all against the conditional checks. It ALL suceed when the objective's status and the conditional status check match.
+The `EncounterObjectMatchesStateConditional` conditional checks the status of an Encounter Object (in code known as `EncounterObjectGameLogic`). Encounter Object is the supertype of lots of in-map logic objects like, but not limited to, a `Chunk`, Dialogue, some Effects and Game Logic objects. If the Encounter Object exists in the encounter layer then you can use this conditional to check its state in a `Trigger`.
 
 ## EncounterObjectMatchesStateConditional
 
