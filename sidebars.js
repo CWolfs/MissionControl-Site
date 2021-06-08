@@ -51,6 +51,13 @@ module.exports = {
           "contract-builder-api/trigger-conditionals/dialogue-matches-conditional",
         ],
       },
+      {
+        type: "category",
+        label: "Trigger Results",
+        items: [
+          "contract-builder-api/trigger-results/execute-game-logic-result",
+        ],
+      },
     ],
     "Suggestions & Feeback": ["support"],
   },
