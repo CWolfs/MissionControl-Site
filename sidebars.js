@@ -57,6 +57,7 @@ module.exports = {
         items: [
           "contract-builder-api/trigger-results/execute-game-logic-result",
           "contract-builder-api/trigger-results/dialogue-result",
+          "contract-builder-api/trigger-results/set-state-result",
         ],
       },
     ],
