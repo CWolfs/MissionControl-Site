@@ -4,7 +4,7 @@ title: Set State At Random Result
 sidebar_label: Set State At Random
 ---
 
-The `SetStateAtRandom` result sets the state of a random Chunk or Node from the provided list.This allows for activating/disabling entire `Chunks` of map logic based on certain conditions or more targetted approaches like disabling a `Region`, for example.
+The `SetStateAtRandom` result sets the state of a random Chunk or Node from the provided list. This allows for activating/disabling entire `Chunks` of map logic based on certain conditions or more targetted approaches like disabling a `Region`, for example.
 
 This is like the `SetState` result but adds a level of unpredictability to the logic.
 
