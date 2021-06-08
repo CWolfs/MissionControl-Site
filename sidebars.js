@@ -47,6 +47,7 @@ module.exports = {
           "contract-builder-api/trigger-conditionals/always-true-conditional",
           "contract-builder-api/trigger-conditionals/objective-status-conditional",
           "contract-builder-api/trigger-conditionals/objective-statuses-conditional",
+          "contract-builder-api/trigger-conditionals/encounter-object-matches-state-conditional",
         ],
       },
     ],
