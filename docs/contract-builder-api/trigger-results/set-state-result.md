@@ -6,7 +6,7 @@ sidebar_label: Set State
 
 The `SetState` result sets the state of a Chunk or Node. This allows for activating/disabling entire `Chunks` of map logic based on certain conditions or more targetted approaches like disabling a `Region`, for example.
 
-## SetState
+## Properties
 
 | Property      | Required | Default    | Details                                                                                                                                    |
 | ------------- | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -14,7 +14,7 @@ The `SetState` result sets the state of a Chunk or Node. This allows for activat
 | EncounterGuid | true     | -          | Guid of the `Chunk`, `Node` or other accessible Encounter Object obtained from the Combat ItemRegistry when triggered                      |
 | State         | true     | -          | State to set the Encounter Object to.<br /><br />Supported states are: `Active`, `Inactive`, `Finished`, `Nothing`, `ControlledByContract` |
 
-#### Example
+## Example
 
 ```json
 {

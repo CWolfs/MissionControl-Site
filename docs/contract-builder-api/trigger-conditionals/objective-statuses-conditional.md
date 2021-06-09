@@ -6,14 +6,14 @@ sidebar_label: Objective Statuses
 
 The `ObjectiveStatusesConditional` conditional checks multiple objectives by their GUID and checks the statuses of them all against the conditional checks. It ALL suceed when the objective's status and the conditional status check match.
 
-## ObjectiveStatusConditional
+## Properties
 
 | Property | Required | Default                      | Details                                                                                                      |
 | -------- | -------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Type     | true     | `ObjectiveStatusConditional` | -                                                                                                            |
 | Statuses | true     | -                            | An array of GUID and Status objects similar to [ObjectiveStatusConditional](objective-status-conditional.md) |
 
-#### Example
+## Example
 
 ```json
 "Conditionals": [

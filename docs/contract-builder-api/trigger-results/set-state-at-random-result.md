@@ -8,7 +8,7 @@ The `SetStateAtRandom` result sets the state of a random Chunk or Node from the 
 
 This is like the `SetState` result but adds a level of unpredictability to the logic.
 
-## SetState
+## Properties
 
 | Property       | Required | Default            | Details                                                                                                                                    |
 | -------------- | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -16,7 +16,7 @@ This is like the `SetState` result but adds a level of unpredictability to the l
 | EncounterGuids | true     | -                  | A list of Guid of the `Chunk`, `Node` or other accessible Encounter Object obtained from the Combat ItemRegistry when triggered            |
 | State          | true     | -                  | State to set the Encounter Object to.<br /><br />Supported states are: `Active`, `Inactive`, `Finished`, `Nothing`, `ControlledByContract` |
 
-#### Example
+## Example
 
 ```json
 {

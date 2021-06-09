@@ -1,14 +1,14 @@
 ---
 id: tag-units-in-region-result
-title: Tag Units in Region Result
-sidebar_label: Tag Units in Region
+title: Tag Units In Region Result
+sidebar_label: Tag Units In Region
 ---
 
 The `TagUnitsInRegion` result adds tags to units within a region.
 
 Currently only `Building` type is supported for this result.
 
-## SetState
+## Properties
 
 | Property      | Required | Default            | Details                                                      |
 | ------------- | -------- | ------------------ | ------------------------------------------------------------ |
@@ -18,7 +18,7 @@ Currently only `Building` type is supported for this result.
 | NumberOfUnits | false    | 1                  | Number of units to tag                                       |
 | Tags          | true     | -                  | Tags to add to units                                         |
 
-#### Example
+## Example
 
 ```json
 {

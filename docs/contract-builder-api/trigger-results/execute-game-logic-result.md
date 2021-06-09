@@ -14,14 +14,14 @@ Only certain Encounter Objects support this and they are all custom to Mission C
 
 This `ExecuteGameLogic` result is rarely used and normally for hard to implement logic that isn't otherwise supported by the other results.
 
-## ExecuteGameLogic
+## Properties
 
 | Property  | Required | Default            | Details                                                                                                        |
 | --------- | -------- | ------------------ | -------------------------------------------------------------------------------------------------------------- |
 | Type      | true     | `ExecuteGameLogic` | -                                                                                                              |
 | ChunkGuid | true     | -                  | Guid of an Encounter Object that has a `ExecutableGameLogic` script on it. Supported types are mentioned above |
 
-#### Example
+## Example
 
 ```json
 {

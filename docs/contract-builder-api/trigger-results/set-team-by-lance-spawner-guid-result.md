@@ -8,7 +8,7 @@ The `SetTeamByLanceSpawnerGuid` result sets the team of units by their `LanceSpa
 
 This can be used to change the team of mechs, turrets or any other unit that spawns from a `LanceSpawnerGameLogic` (like in some modpacks - vehicles).
 
-## SetState
+## Properties
 
 | Property      | Required | Default                     | Details                                                      |
 | ------------- | -------- | --------------------------- | ------------------------------------------------------------ |
@@ -18,7 +18,7 @@ This can be used to change the team of mechs, turrets or any other unit that spa
 | NumberOfUnits | false    | 1                           | Number of units to tag                                       |
 | Tags          | true     | -                           | Tags to add to units                                         |
 
-#### Example
+## Example
 
 ```json
 {

@@ -6,14 +6,14 @@ sidebar_label: Dialogue
 
 The `Dialogue` result allows for running a specified Dialogue Node.
 
-## ExecuteGameLogic
+## Properties
 
 | Property     | Required | Default    | Details                 |
 | ------------ | -------- | ---------- | ----------------------- |
 | Type         | true     | `Dialogue` | -                       |
 | DialogueGuid | true     | -          | Guid of a Dialogue Node |
 
-#### Example
+## Example
 
 ```json
 {

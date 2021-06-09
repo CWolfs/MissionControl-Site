@@ -6,7 +6,7 @@ sidebar_label: Dialogue Matches
 
 The `DialogueMatchesConditional` conditional checks the incoming `Trigger` caller `Guid` against the specified conditional `DialogueGuid`. If they match then the condition is satisfied. This is often used together with a `TriggerOn` of `OnDialogueComplete`, which sends the `Guid` of the completed `Dialogue` Encounter Object.
 
-## ObjectiveStatusConditional
+## Properties
 
 | Property | Required | Default                      | Details                                                                                                                                                              |
 | -------- | -------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -14,7 +14,7 @@ The `DialogueMatchesConditional` conditional checks the incoming `Trigger` calle
 | Guid     | true     | -                            | A [UUIDv4](https://www.uuidgenerator.net/) of the objective you wish to check against                                                                                |
 | Status   | true     | -                            | The Objective status you want the conditional to pass on a successful check.<br /><br />Statuses are: `InProgress`, `Complete`, `Success`, `Failed`, `NotInProgress` |
 
-#### Example 1
+## Example
 
 ```json
 {

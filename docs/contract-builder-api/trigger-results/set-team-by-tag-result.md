@@ -8,7 +8,7 @@ The `SetTeamByTag` result sets the team of any tagged unit by the specified tag.
 
 This currently only supports `Buildings`.
 
-## SetState
+## Properties
 
 | Property | Required | Default        | Details                                                                                                                                                    |
 | -------- | -------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,7 +16,7 @@ This currently only supports `Buildings`.
 | Team     | true     | -              | Team to change units to.<br /><br />Supported teams are: `Player1`, `Player2`, `Employer`, `Target`, `TargetAlly`, `NeutralToAll`, `HostileToAll`, `World` |
 | Tags     | true     | -              | Tags to identify the unit(s) you wish to change team. If multiple are provided then ALL must match.                                                        |
 
-#### Example
+## Example
 
 ```json
 {

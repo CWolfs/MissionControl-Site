@@ -6,7 +6,9 @@ sidebar_label: Set Is Objective Target By Tag
 
 The `SetIsObjectiveTargetByTag` result sets the `IsObjectiveTarget` flag on any `Building` Tagged Combatant that contains the `ObstructionGameLogic` script.
 
-## SetState
+This allows `Objectives` to correctly use `Buildings` as a target.
+
+## Properties
 
 | Property          | Required | Default                     | Details                                                                                                                  |
 | ----------------- | -------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -14,7 +16,7 @@ The `SetIsObjectiveTargetByTag` result sets the `IsObjectiveTarget` flag on any 
 | IsObjectiveTarget | true     | -                           | IsObjectiveTarget is used by Objectives. For example, Destroy Buildings Objectives.<br /><br />Set to: `true` or `false` |
 | Tags              | true     | -                           | Tags to identify the `Building`. If multiple are provided then ALL must match.                                           |
 
-#### Example
+## Example
 
 ```json
 {
