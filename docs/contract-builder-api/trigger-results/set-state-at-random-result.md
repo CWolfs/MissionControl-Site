@@ -10,11 +10,11 @@ This is like the `SetState` result but adds a level of unpredictability to the l
 
 ## SetState
 
-| Property       | Required | Default    | Details                                                                                                                                    |
-| -------------- | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Type           | true     | `SetState` | -                                                                                                                                          |
-| EncounterGuids | true     | -          | A list of Guid of the `Chunk`, `Node` or other accessible Encounter Object obtained from the Combat ItemRegistry when triggered            |
-| State          | true     | -          | State to set the Encounter Object to.<br /><br />Supported states are: `Active`, `Inactive`, `Finished`, `Nothing`, `ControlledByContract` |
+| Property       | Required | Default            | Details                                                                                                                                    |
+| -------------- | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Type           | true     | `SetStateAtRandom` | -                                                                                                                                          |
+| EncounterGuids | true     | -                  | A list of Guid of the `Chunk`, `Node` or other accessible Encounter Object obtained from the Combat ItemRegistry when triggered            |
+| State          | true     | -                  | State to set the Encounter Object to.<br /><br />Supported states are: `Active`, `Inactive`, `Finished`, `Nothing`, `ControlledByContract` |
 
 #### Example
 

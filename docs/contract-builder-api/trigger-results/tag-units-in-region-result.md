@@ -10,13 +10,13 @@ Currently only `Building` type is supported for this result.
 
 ## SetState
 
-| Property      | Required | Default    | Details                                                      |
-| ------------- | -------- | ---------- | ------------------------------------------------------------ |
-| Type          | true     | `SetState` | -                                                            |
-| RegionGuid    | true     | -          | Guid of the `Region`                                         |
-| UnitType      | true     | -          | Type of Unit to tag.<br /><br />Current supports: `Building` |
-| NumberOfUnits | false    | 1          | Number of units to tag                                       |
-| Tags          | true     | -          | Tags to add to units                                         |
+| Property      | Required | Default            | Details                                                      |
+| ------------- | -------- | ------------------ | ------------------------------------------------------------ |
+| Type          | true     | `TagUnitsInRegion` | -                                                            |
+| RegionGuid    | true     | -                  | Guid of the `Region`                                         |
+| UnitType      | true     | -                  | Type of Unit to tag.<br /><br />Current supports: `Building` |
+| NumberOfUnits | false    | 1                  | Number of units to tag                                       |
+| Tags          | true     | -                  | Tags to add to units                                         |
 
 #### Example
 
