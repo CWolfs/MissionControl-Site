@@ -67,6 +67,7 @@ module.exports = {
           "contract-builder-api/trigger-results/complete-objective-result",
           "contract-builder-api/trigger-results/set-temporary-unit-phase-initiative-by-tag-result",
           "contract-builder-api/trigger-results/set-lance-evasion-ticks-by-tag-result",
+          "contract-builder-api/trigger-results/modify-lance-evasion-ticks-by-tag-result",
 
           "contract-builder-api/trigger-results/delay-result",
         ],
