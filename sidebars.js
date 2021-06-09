@@ -71,6 +71,8 @@ module.exports = {
           "contract-builder-api/trigger-results/camera-focus-result",
           "contract-builder-api/trigger-results/destroy-buildings-at-lance-spawns-result",
           "contract-builder-api/trigger-results/delay-result",
+          "contract-builder-api/trigger-results/ignore-chunks-result",
+          "contract-builder-api/trigger-results/trigger-result-at-random-result",
         ],
       },
     ],
