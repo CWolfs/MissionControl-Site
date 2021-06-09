@@ -65,6 +65,7 @@ module.exports = {
           "contract-builder-api/trigger-results/set-is-objective-target-by-tag-result",
           "contract-builder-api/trigger-results/set-units-in-region-to-be-tagged-objective-targets-result",
           "contract-builder-api/trigger-results/complete-objective-result",
+          "contract-builder-api/trigger-results/set-temporary-unit-phase-initiative-by-tag-result",
 
           "contract-builder-api/trigger-results/delay-result",
         ],
