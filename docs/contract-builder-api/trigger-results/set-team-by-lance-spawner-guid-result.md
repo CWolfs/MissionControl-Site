@@ -10,13 +10,13 @@ This can be used to change the team of mechs, turrets or any other unit that spa
 
 ## SetState
 
-| Property      | Required | Default            | Details                                                      |
-| ------------- | -------- | ------------------ | ------------------------------------------------------------ |
-| Type          | true     | `TagUnitsInRegion` | -                                                            |
-| RegionGuid    | true     | -                  | Guid of the `Region`                                         |
-| UnitType      | true     | -                  | Type of Unit to tag.<br /><br />Current supports: `Building` |
-| NumberOfUnits | false    | 1                  | Number of units to tag                                       |
-| Tags          | true     | -                  | Tags to add to units                                         |
+| Property      | Required | Default                     | Details                                                      |
+| ------------- | -------- | --------------------------- | ------------------------------------------------------------ |
+| Type          | true     | `SetTeamByLanceSpawnerGuid` | -                                                            |
+| RegionGuid    | true     | -                           | Guid of the `Region`                                         |
+| UnitType      | true     | -                           | Type of Unit to tag.<br /><br />Current supports: `Building` |
+| NumberOfUnits | false    | 1                           | Number of units to tag                                       |
+| Tags          | true     | -                           | Tags to add to units                                         |
 
 #### Example
 

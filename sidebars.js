@@ -62,6 +62,7 @@ module.exports = {
           "contract-builder-api/trigger-results/tag-units-in-region-result",
           "contract-builder-api/trigger-results/set-team-by-tag-result",
           "contract-builder-api/trigger-results/set-team-by-lance-spawner-guid-result",
+          "contract-builder-api/trigger-results/set-is-objective-target-by-tag-result",
         ],
       },
     ],
