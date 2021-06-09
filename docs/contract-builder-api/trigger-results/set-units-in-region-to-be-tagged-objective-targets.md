@@ -1,5 +1,5 @@
 ---
-id: set-units-in-region-to-be-tagged-objective-targets
+id: set-units-in-region-to-be-tagged-objective-targets-result
 title: Set Units in Region to be Tagged Objective Targets Result
 sidebar_label: Set Units In Region To Be Tagged Objective Targets
 ---
@@ -19,7 +19,7 @@ This selects a specified number of units within a `Region` to be tagged, set to 
 | Type              | true     | `SetUnitsInRegionToBeTaggedObjectiveTargets` | -                                                                                                                                                          |
 | RegionGuid        | true     | -                                            | Guid of the `Region`                                                                                                                                       |
 | UnitType          | true     | -                                            | Type of Unit to tag.<br /><br />Current supports: `Building`                                                                                               |
-| NumberOfUnits     | false    | 1                                            | Number of units to tag, set team and set `IsObjectiveTarget` flag on                                                                                       |
+| NumberOfUnits     | false    | `1`                                          | Number of units to tag, set team and set `IsObjectiveTarget` flag on                                                                                       |
 | Team              | true     | -                                            | Team to change units to.<br /><br />Supported teams are: `Player1`, `Player2`, `Employer`, `Target`, `TargetAlly`, `NeutralToAll`, `HostileToAll`, `World` |
 | IsObjectiveTarget | true     | -                                            | IsObjectiveTarget is used by Objectives. For example, Destroy Buildings Objectives.<br /><br />Set to: `true` or `false`                                   |
 | Tags              | true     | -                                            | Tags to identify the `Building`. If multiple are provided then ALL must match.                                                                             |
