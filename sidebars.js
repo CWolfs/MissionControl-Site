@@ -69,7 +69,7 @@ module.exports = {
           "contract-builder-api/trigger-results/set-lance-evasion-ticks-by-tag-result",
           "contract-builder-api/trigger-results/modify-lance-evasion-ticks-by-tag-result",
           "contract-builder-api/trigger-results/camera-focus-result",
-
+          "contract-builder-api/trigger-results/destroy-buildings-at-lance-spawns-result",
           "contract-builder-api/trigger-results/delay-result",
         ],
       },
