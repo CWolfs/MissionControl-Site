@@ -13,6 +13,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
   "DebugSkirmishMode": false,
   "EnableFlashpointOverrides": false,
   "EnableAdditionalPlayerMechsForFlashpoints": false,
+  "NeverFailSimGameInFlashpoints": true,
   "EnableStoryOverrides": false,
   "EnableAdditionalPlayerMechsForStory": false,
   "RandomSpawns": {
@@ -149,6 +150,7 @@ Mission Control is designed from the very beginning to be entirely configurable 
 | DebugSkirmishMode                         | `false`                          | N/A     | Enables the 'Quick Skirmish' feature and spawns the player next to the enemy lance. Takes priority over `EnableSkirmishMode` |
 | EnableFlashpointOverrides                 | `false`                          | N/A     | Enables MC for Flashpoints if `true` and MC setting's have their respective `EnableForFlashpoints` enabled                   |
 | EnableAdditionalPlayerMechsForFlashpoints | `false`                          | N/A     | Enables 'Bigger Drops' support for Flashpoints if `true` without the other MC features being turned on                       |
+| NeverFailSimGameInFlashpoints             | `true`                           | N/A     | Allows Story Flashpoints to return to the dropship / prevent forcing the user to restart mission or load save                |
 | EnableStoryOverrides                      | `false`                          | N/A     | Enables MC for Story & Restoration contracts if `true` and MC setting's have their respective `EnableForStory` enabled       |
 | EnableAdditionalPlayerMechsForStory       | `false`                          | N/A     | Enables 'Bigger Drops' support for Story & Restoration contracts if `true` without the other MC features being turned on     |
 | RandomSpawns                              | [Object](random-spawns.md)       | N/A     | Random spawn settings                                                                                                        |
