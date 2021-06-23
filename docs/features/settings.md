@@ -136,6 +136,12 @@ Mission Control is designed from the very beginning to be entirely configurable 
       "MinBuffer": 100,
       "MaxBuffer": 200
     }
+  },
+  "Misc": {
+    "LanceSelectionDivergenceOverride": {
+      "Enable": true,
+      "Divergence": 20
+    }
   }
 }
 ```
@@ -259,3 +265,12 @@ See [Dynamic Withdraw Docs](dynamic-withdraw.md)
 | --------- | ------- | ------- | -------------------------------------------------------------------------------- |
 | MinBuffer | `100`   | N/A     | The distance that a lance _must_ spawn beyond / away from the encounter boundary |
 | MaxBuffer | `200`   | N/A     | The distance that a lance _must_ spawn within / close to the encounter boundary  |
+
+### Misc - LanceSelectionDivergenceOverride
+
+This overrides helps fix a vanilla infinite loading issue where, in rare situations, the lance selection would fail to pick a correct lance based on the divergence value. Vanilla is set to `10` so this fix sets it to `20` and seems to work.
+
+| Path       | Default | Example | Details                                                                                                                                                                                                                                   |
+| ---------- | ------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable     | true    | N/A     | Enables the lance selection divergence override value. Original defaults are `10`.<br /><br />Any mod or modpack that uses increased custom lance difficult values (RT, for example) should disable this or experiment with higher values |
+| Divergence | `20`    | N/A     | The divergence value. Vanilla or if disabled will be `10`. If enabled then will be `20` or a custom set value                                                                                                                             |
