@@ -47,11 +47,6 @@ module.exports = {
           label: "Patreon",
         },
         {
-          href: "https://www.nexusmods.com/battletech/mods/319",
-          label: "Nexus",
-          position: "right",
-        },
-        {
           href: "https://github.com/CWolfs/MissionControl",
           label: "GitHub",
           position: "right",
