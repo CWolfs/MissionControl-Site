@@ -8,7 +8,7 @@ The `Spawner` node allows for creation of lance spawns in the map. There are pla
 
 ## SimpleSpawner
 
-This node swaps the contract override's employer and target team.
+This node spawns a lance you'd expect to find in BattleTech.
 
 | Property              | Required | Default         | Details                                                                                                                                                                                                                                                                                                   |
 | --------------------- | -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ This node swaps the contract override's employer and target team.
 | PreciseSpawnPoints    | false    | `false`         | If `false` (default) the unit spawn positions will snap to the nearest hex point on the grid. <br/><br/> If `true`, then the exact positions will be used, with the addition of a height check on the position specified                                                                                  |
 | SpawnType             | true     | -               | The type of spawn method. <br/><br/>Usable: `Leopard`, `DropPod`, `Instant`                                                                                                                                                                                                                               |
 | AI                    | true     | -               | An array of [AI orders](../ai-orders).                                                                                                                                                                                                                                                                    |
-| AlertLanceOnSpawn     | false    | false           | Specifies if the lance should be on alert after they spawn. Certain behaviours in the AI depend on a lance being in alert mode, such as the main combat behaviours and hunting last scene enemies                                                                                                         |
+| AlertLanceOnSpawn     | false    | false           | Specifies if the lance should be on alert after they spawn. Certain behaviours in the AI depend on a lance being in alert mode, such as the main combat behaviours and hunting last seen enemies                                                                                                          |
 | DefaultDetectionRange | false    | `200`           | Specify the lance's default detection range of their enemies                                                                                                                                                                                                                                              |
 | Tags                  | false    | -               | Specify the tags to be applied to the lance spawner for use in results/triggers                                                                                                                                                                                                                           |
 
