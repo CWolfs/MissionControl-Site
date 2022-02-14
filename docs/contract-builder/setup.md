@@ -39,11 +39,24 @@ Add an entry like the following example, but changing what you require:
 
 ## Create an encounter layer
 
-Either use Mission Control's system, or create your own to add an encounter layer entry into the MDD. **This is not covered by ModTek or HBS's ModLoader**.
+Either use Mission Control's system, or create your own to add an encounter layer entry into the MDD. **This is not covered by ModTek versions earlier than v2.0 or HBS's ModLoader**.
 
 If using Mission Control's system:
 
 - Create a folder with your contract type name under `MissionControl/overrides/encounterLayers`. For example, if your contract type is called `Invasion` then call it `invasion`.
+
+If using ModTek v2.0+,
+
+- In your mod's mod.json, add a new `Manifest` entry called `EncounterLayer` that has a `Path` to your folder that contains your encounter layers. e.g.
+
+```json
+"Manifest": [
+  { "Type": "EncounterLayer", "Path": "overrides/encounterLayers" }
+]
+```
+
+For both approaches:
+
 - For the map you wish your contract type to be playable on, you must create a json file here.
 - Name the file `encounterLayer_{contractTypeName}.{mapName}.json`, for example `encounterLayer_soloDuel.mapStory_StoryEncounter3_mMoon_craters`
 - Any IDs that looks like `73b9ebfe-b62b-4ffb-87b9-a0191d2530b3` are `uuid v4`. You can generate these easily by visiting https://www.uuidgenerator.net/
