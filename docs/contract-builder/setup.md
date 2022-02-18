@@ -39,7 +39,7 @@ Add an entry like the following example, but changing what you require:
 
 ## Create an encounter layer
 
-Either use Mission Control's system, or create your own to add an encounter layer entry into the MDD. **This is not covered by ModTek versions earlier than v2.0 or HBS's ModLoader**.
+Either use Mission Control's system, or create your own to add an encounter layer entry into the MDD. **This is not covered by ModTek versions earlier than v2.0**.
 
 If using Mission Control's system:
 
