@@ -94,6 +94,7 @@ settings.user.json --overrides--> settings.modpack.json --overrides--> settings.
     "Autofill": true,
     "AutofillType": "RespectEmpty",
     "AutofillUnitCopyType": "RandomInLance",
+    "AutofillStartingFromContractDifficulty": 3,
     "ExcludeContractTypes": ["SoloDuel", "DuoDuel"],
     "SkipWhenTaggedWithAny": ["lance_type_solo"],
     "SkipWhenTaggedWithAll": [],
