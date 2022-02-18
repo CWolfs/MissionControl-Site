@@ -9,10 +9,10 @@ This works for both vanilla spawn points for contract types and spawns created b
 
 Extended Lances can change the lance size of vanilla lance spawns and ones created with Mission Control's `Additional Lances` feature.
 
-Extended Lances is very flexible and allows for full control on how a player/modder wishes to extended a lance. You can extend it in four ways:
+Extended Lances is very flexible and allows for full control on how a player/modder wishes to extend a lance. You can extend it in four ways:
 
-- `LanceSize` determining the global lance size for the faction
-- Per-contract override (`MissionControl/config/Contracts` or `MissionControl/config/Flashpoints`) that sets a specific lance size
+- `LanceSize` determining the global lance size for the faction. See the below table.
+- [Per-contract override](per-contract-overrides) (`MissionControl/config/Contracts` or `MissionControl/config/Flashpoints`) that sets a specific lance size
 - `LanceDef` that has a tag (defined in `ForceLanceDefSizeWithTag` in the settings.json) in its `LanceTags/tagSetSourceFile` property to enforce the unit size defined in the `LanceDef`
 - `LanceOverride` (in the contract json) that has a tag (defined in `ForceLanceOverrideSizeWithTag` in the settings.json) in its `lanceTagSet/tagSetSourceFile` property to enforce the `LanceOverride` unit size defined in the `ContractOverride` (contract json)
 
@@ -56,7 +56,7 @@ Extended Lances is very flexible and allows for full control on how a player/mod
 }
 ```
 
-| Path                            | Required? | Default                    | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Property                        | Required? | Default                    | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------- | --------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `Enable`                        | Optional  | true                       | Should this feature be enabled or not?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `EnableForFlashpoints`          | Optional  | true                       | Enable feature for Flashpoints if `EnableFlashpointOverrides` is `true`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -77,14 +77,14 @@ Extended Lances is very flexible and allows for full control on how a player/mod
 
 ### Lance Sizes
 
-| Path                                 | Required? | Default | Example         | Details |
-| ------------------------------------ | --------- | ------- | --------------- | ------- |
-| Any string number above 4 (e.g. "5") | Optional  | N/A     | See Table Below | -       |
+| Property                             | Required? | Default | Example         |
+| ------------------------------------ | --------- | ------- | --------------- |
+| Any string number above 4 (e.g. "5") | Optional  | N/A     | See Table Below |
 
 ### Lance Sizes Data
 
-| Path            | Required? | Default | Example                                                                                                          | Details |
-| --------------- | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- | ------- |
+| Property        | Required? | Default | Example                                                                                                          |
+| --------------- | --------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | `Faction`       | true      | true    | The faction short name is used to identify which faction should have the set number of units                     |
 | `DifficultyMod` | Optional  | true    | The difficulty modifier changes the lance selection criteria so a lower, or higher, difficulty lance is selected |
 
