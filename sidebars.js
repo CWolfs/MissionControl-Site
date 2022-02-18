@@ -14,6 +14,7 @@ module.exports = {
       "features/ai-behaviours",
       "features/quick-skirmish",
       "features/combat-dialogue",
+      "features/per-contract-overrides",
     ],
     Content: ["content/story", "content/procedural-contract-types"],
     "Contract Type Builder": [
