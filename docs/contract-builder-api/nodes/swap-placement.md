@@ -19,11 +19,20 @@ This node swaps the location of two `EncounterObjectGameLogic` objects in the ma
 | TargetGuid2 | true     | -                    | The GUID of the second target `EncounterObjectGameLogic` to be swapped |
 
 ```json
-{
-  "Name": "SwapPlacement_SwapLanceSpawners",
-  "Type": "SwapPlacement",
-  "SubType": "EncounterStructure",
-  "TargetGuid1": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe", // Player spawner
-  "TargetGuid2": "f426f0dc-969d-477d-81a9-d02f9e1eff79" // Enemy spawner
-}
+    {
+      "Name": "Chunk_SwapSpawnerPlacement",
+      "Type": "Chunk",
+      "SubType": "Placement",
+      "ControlledByContract": true,
+      "Guid": "ed007c52-f4cb-4bfc-842a-a50454d8a82a",
+      "Children": [
+        {
+          "Name": "SwapPlacement_SwapLanceSpawners",
+          "Type": "SwapPlacement",
+          "SubType": "EncounterStructure",
+          "TargetGuid1": "76b654a6-4f2c-4a6f-86e6-d4cf868335fe", // Player spawner
+          "TargetGuid2": "f426f0dc-969d-477d-81a9-d02f9e1eff79" // Enemy spawner
+        }
+      ]
+    },
 ```

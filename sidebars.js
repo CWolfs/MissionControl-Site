@@ -35,6 +35,7 @@ module.exports = {
           "contract-builder-api/nodes/region",
           "contract-builder-api/nodes/spawner",
           "contract-builder-api/nodes/swap-placement",
+          "contract-builder-api/nodes/combat-state",
         ],
       },
       "contract-builder-api/ai-orders",
