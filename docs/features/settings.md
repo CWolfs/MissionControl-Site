@@ -5,6 +5,25 @@ title: Settings
 
 Mission Control is designed from the very beginning to be entirely configurable for every feature. Due to this, there's a large level of control the player or modder has over the settings.
 
+### Modpack & User Overrides
+
+Mission Control provides many configuration options. If a modpack or user modifies more than a few it can be hard to remember what options were changed when updating to a newer version of Mission Control. To solve this problem MC supports modpack and user overrides in the form of:
+
+- `settings.modpack.json`
+- `settings.user.json`
+
+**NOTE:** These files do not exist in the main Mission Control releases. They are designed for a modpack or user to create them.
+
+If the above files are provided in the same directory as the `settings.json` then any settings defined in them will override it. Not all settings need to exist in these override files - only the changes a modpack or user wishes to change themselves from the default.
+
+In order of priority/override:
+
+```
+settings.user.json --overrides--> settings.modpack.json --overrides--> settings.json
+```
+
+### Settings Example
+
 ```json
 {
   "DebugMode": true,
