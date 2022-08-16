@@ -12,6 +12,18 @@
  */
 
 /* You can override the default Infima variables here. */
+body > div {
+  height: 0 !important;
+  display: inherit !important;
+  flex-direction: inherit !important;
+}
+
+#__docusaurus {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --ifm-color-primary: #ffaa00;
   --ifm-color-primary-dark: rgb(33, 175, 144);
