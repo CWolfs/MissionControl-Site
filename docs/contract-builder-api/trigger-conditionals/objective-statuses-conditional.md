@@ -8,17 +8,17 @@ The `ObjectiveStatusesConditional` conditional checks multiple objectives by the
 
 ## Properties
 
-| Property | Required | Default                      | Details                                                                                                      |
-| -------- | -------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Type     | true     | `ObjectiveStatusConditional` | -                                                                                                            |
-| Statuses | true     | -                            | An array of GUID and Status objects similar to [ObjectiveStatusConditional](objective-status-conditional.md) |
+| Property | Required | Default                        | Details                                                                                                      |
+| -------- | -------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Type     | true     | `ObjectiveStatusesConditional` | -                                                                                                            |
+| Statuses | true     | -                              | An array of GUID and Status objects similar to [ObjectiveStatusConditional](objective-status-conditional.md) |
 
 ## Example
 
 ```json
 "Conditionals": [
     {
-        "Type": "ObjectiveStatusConditional",
+        "Type": "ObjectiveStatusesConditional",
         "Statuses": [
             {
                 "Guid": "786166e2-22ea-45c1-9786-68df31958bd8", // Guid of an Objective node elsewhere in your common.jsonc
