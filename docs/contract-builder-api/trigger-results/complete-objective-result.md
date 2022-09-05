@@ -4,16 +4,14 @@ title: Complete Objective Result
 sidebar_label: Complete Objective
 ---
 
-The `CompleteObjective` result adds tags to units within a region.
-
-Currently only `Building` type is supported for this result.
+The `CompleteObjective` result completes a specified objective. It can be marked as `Succeed` or `Failed`.
 
 ## Properties
 
 | Property       | Required | Default             | Details                                                                         |
 | -------------- | -------- | ------------------- | ------------------------------------------------------------------------------- |
 | Type           | true     | `CompleteObjective` | -                                                                               |
-| ObjectiveGuid  | true     | -                   | Guid of the `Region`                                                            |
+| ObjectiveGuid  | true     | -                   | Guid of the `Objective`                                                         |
 | CompletionType | false    | `Succeed`           | This is the state of the `Objective`. You can mark it as: `Succeed` or `Failed` |
 
 ## Example
