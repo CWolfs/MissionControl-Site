@@ -72,8 +72,8 @@ module.exports = {
 
           "contract-builder-api/trigger-results/set-is-objective-target-by-tag-result",
           "contract-builder-api/trigger-results/set-lance-evasion-ticks-by-tag-result",
-          "contract-builder-api/trigger-results/set-state-at-random-result",
-          "contract-builder-api/trigger-results/set-state-result",
+          "contract-builder-api/trigger-results/set-status-at-random-result",
+          "contract-builder-api/trigger-results/set-status-result",
           "contract-builder-api/trigger-results/set-team-by-lance-spawner-guid-result",
           "contract-builder-api/trigger-results/set-team-by-tag-result",
           "contract-builder-api/trigger-results/set-temporary-unit-phase-initiative-by-tag-result",
