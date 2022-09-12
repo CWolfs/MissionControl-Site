@@ -6,26 +6,26 @@ sidebar_label: Set Team By Lance Spawner Guid
 
 The `SetTeamByLanceSpawnerGuid` result sets the team of units by their `LanceSpawnerGameLogic` Guid.
 
-This can be used to change the team of mechs, turrets or any other unit that spawns from a `LanceSpawnerGameLogic` (like in some modpacks - vehicles).
+This can be used to change the team of mechs, turrets or any other unit that spawns from a `LanceSpawnerGameLogic`.
 
 ## Properties
 
-| Property      | Required | Default                     | Details                                                      |
-| ------------- | -------- | --------------------------- | ------------------------------------------------------------ |
-| Type          | true     | `SetTeamByLanceSpawnerGuid` | -                                                            |
-| RegionGuid    | true     | -                           | Guid of the `Region`                                         |
-| UnitType      | true     | -                           | Type of Unit to tag.<br /><br />Current supports: `Building` |
-| NumberOfUnits | false    | `1`                         | Number of units to tag                                       |
-| Tags          | true     | -                           | Tags to add to units                                         |
+| Property         | Required | Default                     | Details                                                                                                                                                                                          |
+| ---------------- | -------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Type             | true     | `SetTeamByLanceSpawnerGuid` | -                                                                                                                                                                                                |
+| Team             | true     | -                           | Team to change units to.<br /><br />Supported teams are: `Player1`, `Player2`, `Employer`, `Target`, `TargetAlly`, `NeutralToAll`, `HostileToAll`, `World`                                       |
+| LanceSpawnerGuid | true     | -                           | Guid of the `LanceSpawner`                                                                                                                                                                       |
+| AlertLance       | false    | `true`                      | Specifies if the lance should be on alert after they spawn. Certain behaviours in the AI depend on a lance being in alert mode, such as the main combat behaviours and hunting last seen enemies |
+| ApplyTags        | false    | -                           | Tags to add to units wen they change team                                                                                                                                                        |
 
 ## Example
 
 ```json
 {
-  "Type": "TagUnitsInRegion",
-  "RegionGuid": "21a03616-c88b-4edd-a9a9-b4dd54b46d6c",
-  "UnitType": "Building",
-  "NumberOfUnits": 4,
-  "Tags": ["defend_building_3b"]
+  "Type": "SetTeamByLanceSpawnerGuid",
+  "Team": "Target",
+  "LanceSpawnerGuid": "a363b6b5-62f7-4290-a8a5-1f744a43109e",
+  "AlertLance": true,
+  "ApplyTags": ["defected_lance"]
 }
 ```
