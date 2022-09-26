@@ -11,6 +11,7 @@ Lances are defined using a similar configuration to how they are defined in the 
 
 - [Settings Breakdown](#settings-breakdown)
 - [Lance Definition Breakdown](#lance-definition-breakdown)
+- [API access](#api-access)
 
 ## Settings Breakdown
 
@@ -214,3 +215,20 @@ Each
 | `pilotDefId`          | Optional  | `pilotDef_InheritLance` | `pilotDef_InheritLance`, `UseLance`, `Tagged`, `pilot_default`, `pilot_commander` or a specific pilot def id (e.g. `pilot_d7_defender`)                                                          | Allows for selection system for pilots. `pilotTagSet` and `pilotExcludedTagSet` is ignored if a specific mech def id is set |
 | `pilotTagSet`         | Optional  | None                    | `"items": ["pilot_npc_outrider"]`                                                                                                                                                                | Tags for selecting the unit if `Tagged` is selected                                                                         |
 | `pilotExcludedTagSet` | Optional  | None                    |                                                                                                                                                                                                  | Allows the pilot definition to exclude specific tags when selecting by tag                                                  |
+
+## API Access
+
+The Additional Lances feature can be accessed and controlled by other mods via the Mission Control API. `teamType` is either `enemies` or `allies` to represent target or employer respectively.
+
+Using `MissionControl.Instance.API.` you get the following AL methods.
+
+| Path                                | Params                                                                          | Details                                                                                                              |
+| ----------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `HasOverriddenAdditionalLances`     | teamType - `allies` or `enemy`                                                  | Returns `true` or `false` if the AL lances for the team have been overridden with the API                            |
+| `GetOverriddenAdditionalLanceCount` | teamType - `allies` or `enemy`                                                  | Returns the count of lances to be created as part of the overridden ALs                                              |
+| `SetOverriddenAdditionalLances`     | teamType - `allies` or `enemy`<br />count - number of AL lances to set          | Used to override the number of AL lances but allowing Mission Control to generate the lances with the usual AL rules |
+| `SetOverriddenAdditionalLances`     | teamType - `allies` or `enemy`<br />lanceOverrides - list of MC MLanceOverrides | Used to provide a list of MC MLanceOverrides to use for Additional Lances                                            |
+| `SetOverriddenAdditionalLances`     | teamType - `allies` or `enemy`<br />lanceOverrides - list of LanceOverrides     | Used to provide a list of LanceOverrides to use for Additional Lances. Converted to MLanceOverrides internally.      |
+| `GetOverriddenAdditionalLance`      | teamType - `allies` or `enemy`                                                  | Used to get the list of MLanceOverrides, no matter if set using MLanceOverride or LanceOverride API method           |
+
+See the [github feature page](https://github.com/CWolfs/MissionControl/issues/513#issuecomment-1257807830) for more in-depth discussion.
