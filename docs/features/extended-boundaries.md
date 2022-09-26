@@ -7,6 +7,12 @@ Increase the size of the encounter to the maximum available map size. This can s
 
 Extended boundaries can increase the size of the contract type / encounter boundary (playable area in the map). In vanilla BT, contract types never use up to the maximum playable space (2k by 2k map size). With this feature, you can expand the boundary to either the maximum size (set as `1` for the `IncreaseBoundarySizeByPercentage` value), or increase the boundary by a percentage of that current boundary size.
 
+`MapId` and `ContractTypeName` can be used together, or on their own. A more specific setting will override a less specific setting, and `MapId` is considered more specific than `ContractTypeName`. The priority processing order is as follows:
+
+```
+MapId and ContractTypeName set --overrides--> MapId set and no ContractTypeName set --overrides--> ContractTypeName set and no MapId set.
+```
+
 ## Settings Breakdown
 
 ```json
