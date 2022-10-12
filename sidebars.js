@@ -13,6 +13,7 @@ module.exports = {
       "features/dynamic-withdraw",
       "features/ai-behaviours",
       "features/quick-skirmish",
+      "features/dialogue-system",
       "features/combat-dialogue",
       "features/per-contract-overrides",
     ],
