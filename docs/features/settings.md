@@ -169,7 +169,8 @@ settings.user.json --overrides--> settings.modpack.json --overrides--> settings.
     "LanceSelectionDivergenceOverride": {
       "Enable": true,
       "Divergence": 20
-    }
+    },
+    "ContractOverrideDataCleanupMethod": "RestoreFromCopy"
   }
 }
 ```
@@ -293,6 +294,15 @@ See [Dynamic Withdraw Docs](dynamic-withdraw.md)
 | --------- | ------- | ------- | -------------------------------------------------------------------------------- |
 | MinBuffer | `100`   | N/A     | The distance that a lance _must_ spawn beyond / away from the encounter boundary |
 | MaxBuffer | `200`   | N/A     | The distance that a lance _must_ spawn within / close to the encounter boundary  |
+
+### Misc
+
+This contains various ungrouped settings.
+
+| Path                              | Default                                            | Example | Details                                                                                                                                                                                                                                                                                                            |
+| --------------------------------- | -------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| LanceSelectionDivergenceOverride  | [Object](#misc---lanceselectiondivergenceoverride) | N/A     | Settings for 'LanceSelectionDivergenceOverride'                                                                                                                                                                                                                                                                    |
+| ContractOverrideDataCleanupMethod | `RestoreFromCopy`                                  | N/A     | Determines which method MC cleans up old data between contracts.<br /><br />`RestoreFromCopy` uses copies of data taken before MC runs and restores the copied data back into the ContractOverride.<br /><br />`ScrubData` is the old method. It scans through the ContractOverride and removes the data MC added. |
 
 ### Misc - LanceSelectionDivergenceOverride
 
