@@ -311,17 +311,70 @@ You can combine up to 2 conditionals together to form a multi-conditional check.
 - Multi-conditions must wrap the conditions in another `{...}`
 - Multi-conditions can only use `AND` or `OR` to combine conditions
 
-For example, `{{conditional1} AND {conditional2}}`.
+For example:
 
-### Reference
+- `{{conditional1} AND {conditional2}}` (high level structure)
+- `{{MC.If.EmployerFactionName.Contains.Capellan} OR {MC.If.Commander.HasTag.commander_family_noble}}`
 
-| API           | Example                                 | Details                                                                                                                                     |
-| ------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*FactionType | `{MC.If.EmployerFactionType.Is.Pirate}` | Conditional against a Team's FactionType.<br/><br/>Supported Teams: EmployerTeam, TargetTeam<br/><br/>Supported Operation: `Is` and `IsNot` |
+### Reference - Faction-Related
+
+You can check faction information with the faction related conditions.
+
+| API                | Example                                       | Details                                                                                                                                                                          |
+| ------------------ | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*FactionType      | `{MC.If.EmployerFactionType.Is.Pirate}`       | Check a Team's Faction's Type.<br/><br/>Teams: EmployerTeam, TargetTeam<br/><br/>Operations: `Is`, `IsNot`<br/><br/>Types: `GreatHouse`, `Merc`, `Pirate`, `Clan`, `RealFaction` |
+| \*FactionName      | `{MC.If.TargetFactionName.Contains.Capellen}` | Check a Team's Faction's Name.<br/><br/>Teams: EmployerTeam, TargetTeam<br/><br/>Operations: `Is`, `IsNot`, `Contains`                                                           |
+| \*FactionShortName | `{MC.If.TargetFactionShortName.IsNot.Davion}` | Check a Team's Faction's ShortName.<br/><br/>Teams: EmployerTeam, TargetTeam<br/><br/>Operations: `Is`, `IsNot`, `Contains`                                                      |
+
+### Reference - Tags-Related
+
+You can check any tag information with the tag-related related conditions. All tag related APIs can use the following: `HasTag`, `HasNoTag`, `HasAllTags`, `HasAnyTags`, `HasNoTags`. Checks that use multiple tags require the list to be comma seperated, for example, `{MC.If.System.HasNoTags.planet_other_ruins,planet_civ_primitive}`.
+
+| API       | Example                                                | Details                                                                                                  |
+| --------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Encounter | `{MC.If.Encounter.HasNoTag.mc_blackout_phase_1b}`      | An Encounter is a special Mission Control tag scope that is reset after every mission/combat.            |
+| Pilot     | `{MC.If.PlayerLances.Speaker.HasTag.pilot_reckless}`   | Check a pilot's tags.<br/><br/>Pilot References: `Speaker`, `Commander`, `TeamPilot_Random_[IDENTIFIER]` |
+| Commander | `{MC.If.Commander.HasTag.commander_youth_bankrupt}`    | Check the Commander's tags                                                                               |
+| Company   | `{MC.If.Company.HasAnyTags.argo_medBay2,argo_medBay3}` | Check the Company's tags                                                                                 |
+| System    | `{MC.If.System.HasNoTag.planet_other_ruins}`           | Check the System's tags                                                                                  |
+
+### Reference - Random
+
+You can introduce some random elements into your dialogue with the random conditionals.
+
+| API              | Example                                   | Details                                                                                                                                                                                                      |
+| ---------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| RandomPercentage | `{MC.If.RandomPercentage.IsLessThan.30%}` | Generates a random percentage from 0 to 100. If the value is within the specified range it returns a success.<br/><br/>Operators: `Is`, `IsLessThan`, `IsLessThanOrIs`, `IsGreaterThan`, `IsGreaterThanOrIs` |
 
 ## Modifications in Dialogue
 
-...
+**AVAILABLE IN:** `{...} / before` and `[...] / after`
+
+Sometimes a modder will want to make game modifications when dialogue is activated and displayed. Mission Control provides some modification APIs.
+
+| API           | Example                                             | Details                                                                                                                                            |
+| ------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EncounterTags | `{MC.Modification.AddTo.EncounterTags.my_tag}`      | Sets an Encounter tag.<br/><br/>Operations: `AddTo`, `RemoveFrom`.                                                                                 |
+| Pilot         | `[MC.Modification.AddTo.SpeakerTags.my_tag]`        | Sets a tag for a pilot.<br/><br/>Operations: `AddTo`, `RemoveFrom`.<br/><br/>Pilot References: `SpeakerTags`, `TeamPilot_Random_[IDENTIFIER]_Tags` |
+| CommanderTags | `[MC.Modification.RemoveFrom.CommanderTags.my_tag]` | Sets a Commander tag.<br/><br/>Operations: `AddTo`, `RemoveFrom`.                                                                                  |
+| CompanyTags   | `{MC.Modification.RemoveFrom.CompanyTags.my_tag}`   | Sets a Company tag.<br/><br/>Operations: `AddTo`, `RemoveFrom`.                                                                                    |
+| SystemTags    | `[MC.Modification.AddTo.SystemTags.my_tag]`         | Sets a System tag.<br/><br/>Operations: `AddTo`, `RemoveFrom`.                                                                                     |
+
+### Example of adding a tag
+
+```json
+{
+  "words": "{MC.If.Commander.HasTag.commander_career_merchantGuard}{MC.Modification.AddTo.EncounterTags.mc_recognised_strange_turrets}<color=#85DBF6FF>[Merchant Guard Career]</color> ...the way those turrets came online. It reminds me of a non-standard turret attack program I saw a merchant try and sell.",
+  "wordsColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+  "selectedCastDefId": "castDef_Commander",
+  "emote": "Default",
+  "audioName": "NONE",
+  "cameraFocusGuid": "e7e9f35b-7ed8-404e-9dae-69be61de2dd3",
+  "cameraDistance": "Medium",
+  "cameraHeight": "High",
+  "revealRadius": -1
+}
+```
 
 ## Formatting
 
