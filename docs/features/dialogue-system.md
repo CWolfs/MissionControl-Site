@@ -346,6 +346,22 @@ You can introduce some random elements into your dialogue with the random condit
 | ---------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | RandomPercentage | `{MC.If.RandomPercentage.IsLessThan.30%}` | Generates a random percentage from 0 to 100. If the value is within the specified range it returns a success.<br/><br/>Operators: `Is`, `IsLessThan`, `IsLessThanOrIs`, `IsGreaterThan`, `IsGreaterThanOrIs` |
 
+#### Only show dialogue 25% of the time
+
+```json
+{
+  "words": "{MC.If.RandomPercentage.IsLessThanOrIs.25%}You'll only see me say this 25% of the time.",
+  "wordsColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+  "selectedCastDefId": "castDef_DariusDefault",
+  "emote": "Default",
+  "audioName": "NONE",
+  "cameraFocusGuid": "e7e9f35b-7ed8-404e-9dae-69be61de2dd3",
+  "cameraDistance": "Medium",
+  "cameraHeight": "Default",
+  "revealRadius": -1
+}
+```
+
 ## Modifications in Dialogue
 
 **AVAILABLE IN:** `{...} / before` and `[...] / after`
@@ -406,3 +422,27 @@ Mission Control can help you format text. Some text that comes from BattleTech i
 ```
 
 ## Tricks & Tips
+
+### Overcoming the 2 Conditional Limit per Multi-Conditional
+
+Currently the multi-conditional system only supports combining up to 2 conditionals. You can overcome this by using a dialogue node to combine checks into one via a tag.
+
+- Make a dialogue run a [Multi-Conditional](#multi-conditions) check
+- On success, set an Encounter-level tag with a [Modification](#modifications-in-dialogue)
+- In the same dialogue, set the rest of the text to be `|SKIP|` - this will prevent the dialogue from appearing even though the conditionls and modification ran
+
+This way you can now use the tag you set in a new multi-conditional with a third conditional check. You'll be able to stack these up to achieve as many conditional checks as you need.
+
+#### Example
+
+```json
+// Combine two conditionals into a tag
+{
+  "words": "{{MC.If.Encounter.HasTag.mc_recognised_strange_turrets} AND {MC.If.Encounter.HasTag.mc_blackout_phase1b}}{MC.Modification.AddTo.EncounterTags.mc_solved_crime}|SKIPDIALOGUE|"
+}
+
+// In another dialogue, use this tag with another conditional
+{
+  "words": "{{MC.If.Encounter.HasTag.mc_solved_crime} AND {MC.If.Commander.HasTag.commander_youth_bankrupt}}Say something unique to this situation!"
+}
+```
