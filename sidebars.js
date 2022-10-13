@@ -16,6 +16,7 @@ module.exports = {
       "features/dialogue-system",
       "features/combat-dialogue",
       "features/per-contract-overrides",
+      "features/metrics",
     ],
     Content: ["content/story", "content/procedural-contract-types"],
     "Contract Type Builder": [
