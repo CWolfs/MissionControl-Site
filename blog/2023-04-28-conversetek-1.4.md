@@ -14,7 +14,11 @@ Today I’ve released v1.4 of ConverseTek.
 
 For those of you who don’t know what ConverseTek is, it’s the tool I developed for creating and editing BT dropship conversations (1-on-1s with the crew and conference room) and released in Summer 2018.
 
-As part of this update I rewrote / ported the project to Typescript and updated a lot of the badly outdated dependencies. In the process I’ve improved lots of areas of code since I was forced to touch almost every single file. This makes the project easier to work with so it makes it easier to improve. Before I get onto the new features and improvements I need to mention the elephant in the room / the outstanding big issue and how it’s now been fixed.
+You can grab the new release from the Github [ConverseTek v1.4 Release](https://github.com/CWolfs/ConverseTek/releases/tag/v1.4.0).
+
+As part of this update I rewrote / ported the project to Typescript and updated a lot of the badly outdated dependencies. In the process I’ve improved lots of areas of code since I was forced to touch almost every single file. This makes the project easier to work with so it makes it easier to improve.
+
+Before I get onto the new features and improvements I need to mention the elephant in the room / the outstanding big issue and how it’s now been fixed.
 
 ## Corrupted Conversations / Bad Data (The Ugly Big Elephant)
 
