@@ -129,3 +129,82 @@ This node swaps the contract override's employer and target team.
   "DurationType": "AfterMoveComplete"
 }
 ```
+
+## DestroyXUnits
+
+This node creates an objective that allows you to create a destroy objective for tagged buildings or units.
+
+| Property               | Required | Default        | Details                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------- | -------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name                   | true     | -              | Name of the Node that will be used for the Unity game object                                                                                                                                                                                                                                                                               |
+| Type                   | true     | `Objective`    | Type of node                                                                                                                                                                                                                                                                                                                               |
+| SubType                | true     | `DefendXUnits` | Subtype of node                                                                                                                                                                                                                                                                                                                            |
+| Guid                   | true     | -              | A [UUIDv4](https://www.uuidgenerator.net/) that you then use in the contract json                                                                                                                                                                                                                                                          |
+| ContractObjectiveGuid  | true     | -              | The UUIDv4 that you've specified for the contract objective (this is currently set in the contract json but in future versions of the contract type builder you'll be able to specify it in the contract build file)                                                                                                                       |
+| Title                  | true     | -              | The default title for the objective. This is always overriden by the contract json for contract specific titles                                                                                                                                                                                                                            |
+| Priority               | true     | -              | Specifies the priority, which is the order in the objective list it appears (higher or lower)                                                                                                                                                                                                                                              |
+| DisplayToUser          | false    | `true`         | Controls if this objective should be displayed to the player or not. Useful for hidden objectives                                                                                                                                                                                                                                          |
+| IsPrimaryObjective     | true     | -              | Controls if the objective should be a primary or secondary objective                                                                                                                                                                                                                                                                       |
+| RequiredTagsOnUnit     | true     | -              | Specifies the tags of any building or unit that should be defended                                                                                                                                                                                                                                                                         |
+| NumberOfUnitsToDestroy | false    | `1`            | Specifies the number of units that should be destroyed. Be aware, if you specify too many units and you don't have enough tagged units to satisfy the objective - it will autofail                                                                                                                                                         |
+| ProgressFormat         | false    | -              | The progress format has access to certain variables of the objective and can be set out in a title.<br /><br /> Usable: `[killedUnitsSoFar]`, `[numberOfUnitsToKill]`, `[percentageComplete]`, `[unitsStillNeededToMeetThreshold]`<br /><br />Example: `Destroy [numberOfUnitsToKill] Buildings, [unitsStillNeededToMeetThreshold] Remain` |
+| Description            | true     | -              | Development description helpful for debugging but not displayed to the player                                                                                                                                                                                                                                                              |
+
+#### Example
+
+```json
+{
+  "Name": "Objective_DestroyBuildings",
+  "Type": "Objective",
+  "SubType": "DestroyXUnits",
+  "Guid": "67b973aa-d770-4be7-bfee-36b516bc4699", // Must match the objective guid in the contract .json
+  "ContractObjectiveGuid": "73275787-720a-4c33-9f20-953b1bbf48bd", // Must match the contract guid in the contract .json
+  "Title": "Destroy buildings",
+  "Priority": 1,
+  "IsPrimaryObjective": true,
+  "RequiredTagsOnUnit": ["destroy_building_1a"],
+  "ProgressFormat": "Destroy [numberOfUnitsToKill] Buildings, [unitsStillNeededToMeetThreshold] Remain",
+  "Description": "The objective for the player to destroy the buildings"
+}
+```
+
+## DestroyXDestructibles
+
+This node creates an objective that allows you to create a destroy objective for destructibles within a region.
+
+| Property                      | Required | Default                 | Details                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------- | -------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                          | true     | -                       | Name of the Node that will be used for the Unity game object                                                                                                                                                                                                                                                                                    |
+| Type                          | true     | `Objective`             | Type of node                                                                                                                                                                                                                                                                                                                                    |
+| SubType                       | true     | `DestroyXDestructibles` | Subtype of node                                                                                                                                                                                                                                                                                                                                 |
+| Guid                          | true     | -                       | A [UUIDv4](https://www.uuidgenerator.net/) that you then use in the contract json                                                                                                                                                                                                                                                               |
+| ContractObjectiveGuid         | true     | -                       | The UUIDv4 that you've specified for the contract objective (this is currently set in the contract json but in future versions of the contract type builder you'll be able to specify it in the contract build file)                                                                                                                            |
+| Title                         | true     | -                       | The default title for the objective. This is always overriden by the contract json for contract specific titles                                                                                                                                                                                                                                 |
+| Priority                      | true     | -                       | Specifies the priority, which is the order in the objective list it appears (higher or lower)                                                                                                                                                                                                                                                   |
+| DisplayToUser                 | false    | `true`                  | Controls if this objective should be displayed to the player or not. Useful for hidden objectives                                                                                                                                                                                                                                               |
+| IsPrimaryObjective            | true     | -                       | Controls if the objective should be a primary or secondary objective                                                                                                                                                                                                                                                                            |
+| RegionGuid                    | true     | -                       | Specifies the region the destructibles are in                                                                                                                                                                                                                                                                                                   |
+| CountType                     | false    | `Number`                | Specifices the value type for this objective.<br /><br /> Usable: `Number` or `Percentage`                                                                                                                                                                                                                                                      |
+| ValueOfDestructiblesToDestroy | false    | `1`                     | Specifices the number, or percentage, of destructibles to be destroyed in the region.<br /><br />Percentage values are from 1-100.                                                                                                                                                                                                              |
+| ProgressFormat                | false    | -                       | The progress format has access to certain variables of the objective and can be set out in a title.<br /><br /> Usable: `[destroyedDestructiblesSoFar]`, `[numberOfDestructiblesToDestroy]`, `[percentageComplete]`, `[destructiblesStillNeededToMeetThreshold]`<br /><br />Example: `Destroy [percentageComplete] of the Local Infrastructure` |
+| Description                   | true     | -                       | Development description helpful for debugging but not displayed to the player                                                                                                                                                                                                                                                                   |
+
+#### Example
+
+```json
+{
+  "Name": "Objective_DestroyBuildings",
+  "Type": "Objective",
+  "SubType": "DestroyXUnits",
+  "Guid": "67b973aa-d770-4be7-bfee-36b516bc4699", // Must match the objective guid in the contract .json
+  "ContractObjectiveGuid": "73275787-720a-4c33-9f20-953b1bbf48bd", // Must match the contract guid in the contract .json
+  "Title": "Destroy buildings",
+  "Priority": 1,
+  "IsPrimaryObjective": true,
+  "RegionGuid": "51a973aa-h771-2be7-bfee-56b556bc2693",
+  "CountType": "Percentage",
+  "ValueOfDestructiblesToDestroy": 50,
+  "ProgressFormat": "Destroy [numberOfUnitsToKill] Buildings, [unitsStillNeededToMeetThreshold] Remain",
+  "Description": "The objective for the player to destroy the buildings"
+}
+```
