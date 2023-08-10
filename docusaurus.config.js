@@ -27,8 +27,8 @@ module.exports = {
         { to: "docs/overview/about", label: "Docs", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/CWolfs/MissionControl/releases/download/v1.5.1/MissionControl-v1.5.1.zip",
-          label: "Download (1.5.1)",
+          href: "https://github.com/CWolfs/MissionControl/releases/download/v1.5.2/MissionControl-v1.5.2.zip",
+          label: "Download (1.5.2)",
           position: "left",
         },
         {
